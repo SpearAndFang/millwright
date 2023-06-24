@@ -1,0 +1,7 @@
+{
+  "game:tabname-millwright": "Millwright",
+  "block-windmillrotor-single-*": "Windmill rotor (reinforced)",
+  "block-windmillrotor-double-*": "Double Windmill rotor (reinforced)",
+  "item-sailcentered": "Sail (centered)",
+  "itemdesc-sailcentered": "Windmill component"
+}

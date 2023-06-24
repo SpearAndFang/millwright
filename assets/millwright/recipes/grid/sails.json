@@ -1,0 +1,24 @@
+[
+  {
+    "ingredientPattern": "_LS,LSL,SL_",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 4
+      },
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 2
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailcentered",
+      "quantity": 4
+    }
+  }
+]
