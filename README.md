@@ -1,2 +1,3 @@
-# millwright
-millwright mod for Vintage Story
+# Millwright
+Mod for Vintage Story
+https://mods.vintagestory.at/millwright
