@@ -8,8 +8,6 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"wood": "game:block/wood/planks/generic",
-		"cloth": "game:block/cloth/linen/normal1"
 	},
 	"elements": [
 		{

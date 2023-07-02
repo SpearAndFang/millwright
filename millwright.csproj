@@ -85,6 +85,11 @@
     <Content Include="assets/**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Compile Remove="assets\millwright\patches\**" />
+    <Content Remove="assets\millwright\patches\**" />
+    <EmbeddedResource Remove="assets\millwright\patches\**" />
+    <None Remove="assets\millwright\patches\**" />
+    <None Remove="assets\millwright\itemtypes\resource\sailangled.json" />
     <None Remove="assets\millwright\itemtypes\resource\sailcentered.json" />
     <None Remove="assets\millwright\recipes\grid\sails.json" />
     <None Remove="assets\millwright\recipes\grid\windmillrotor.json" />
@@ -98,8 +103,6 @@
 
   <ItemGroup>
     <Folder Include="assets\millwright\lang\" />
-    <Folder Include="assets\millwright\patches\" />
-    <Folder Include="assets\millwright\shapes\block\wood\mechanics\" />
     <Folder Include="assets\millwright\shapes\item\" />
   </ItemGroup>
 </Project>

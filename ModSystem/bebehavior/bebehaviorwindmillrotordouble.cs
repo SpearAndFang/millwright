@@ -18,6 +18,7 @@ namespace Millwright.ModSystem
         private double windSpeed;
 
         public int SailLength { get; private set; } = 0;
+        public string SailType { get; private set; } = "";
 
         private AssetLocation sound;
         protected override AssetLocation Sound => this.sound;
@@ -26,7 +27,10 @@ namespace Millwright.ModSystem
             return (0.5f + (0.5f * (float)this.windSpeed)) * this.SailLength / 3f;
         }
 
-        private readonly float bladeModifier = (float)ModConfig.Loaded.SailCenteredModifier * 2;
+        private readonly float CenteredbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
+        private readonly float AngledbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
+
+        public float bladeModifier = 1.0f;
 
         protected override float Resistance => 0.003f;
         protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4);
@@ -43,6 +47,12 @@ namespace Millwright.ModSystem
             base.Initialize(api, properties);
             this.sound = new AssetLocation("game:sounds/effect/swoosh");
             this.weatherSystem = this.Api.ModLoader.GetModSystem<WeatherSystemBase>();
+
+            if (this.SailType == "sailangled")
+            { this.bladeModifier = this.AngledbladeModifier; }
+            else
+            { this.bladeModifier = this.CenteredbladeModifier; }
+
             this.Blockentity.RegisterGameTickListener(this.CheckWindSpeed, 1000);
         }
 
@@ -61,10 +71,19 @@ namespace Millwright.ModSystem
                     this.Api.World.PlaySoundAt(new AssetLocation("game:sounds/effect/toolbreak"), this.Position.X + 0.5, this.Position.Y + 0.5, this.Position.Z + 0.5, null, false, 20, 1f);
                     while (this.SailLength-- > 0)
                     {
-                        var stacks = new ItemStack(this.Api.World.GetItem(new AssetLocation("millwright:sailcentered")), 8);
+                        //for downwards compatibility
+                        var sail = "";
+                        if (this.SailType == null || this.SailType == "")
+                        { sail = "sailcentered"; }
+                        else
+                        { sail = this.SailType; }
+
+                        var assetLoc = new AssetLocation("millwright:" + sail);
+                        var stacks = new ItemStack(this.Api.World.GetItem(assetLoc), 8);
                         this.Api.World.SpawnItemEntity(stacks, this.Blockentity.Pos.ToVec3d().Add(0.5, 0.5, 0.5));
                     }
                     this.SailLength = 0;
+                    this.SailType = "";
                     this.Blockentity.MarkDirty(true);
                     this.network.updateNetwork(this.manager.getTickNumber());
                 }
@@ -73,9 +92,17 @@ namespace Millwright.ModSystem
 
         public override void OnBlockBroken(IPlayer byPlayer = null)
         {
+            //for downwards compatibility
+            var sail = "";
+            if (this.SailType == null || this.SailType == "")
+            { sail = "sailcentered"; }
+            else
+            { sail = this.SailType; }
+
             while (this.SailLength-- > 0)
             {
-                var stacks = new ItemStack(this.Api.World.GetItem(new AssetLocation("millwright:sailcentered")), 8);
+                var assetLoc = new AssetLocation("millwright:" + sail);
+                var stacks = new ItemStack(this.Api.World.GetItem(assetLoc), 8);
                 this.Api.World.SpawnItemEntity(stacks, this.Blockentity.Pos.ToVec3d().Add(0.5, 0.5, 0.5));
             }
 
@@ -95,7 +122,22 @@ namespace Millwright.ModSystem
                 return false;
             }
 
-            var sailStack = new ItemStack(this.Api.World.GetItem(new AssetLocation("millwright:sailcentered")));
+            //for downwards compatibility
+            var sail = "";
+            if (this.SailType == null || this.SailType == "")
+            { sail = "sailcentered"; }
+            else
+            { sail = this.SailType; }
+
+            sail = slot.Itemstack.Collectible.Code.Path;
+            if (!sail.StartsWith("sail") || slot.Itemstack.Collectible.Code.Domain != "millwright")
+            { return false; }
+
+            if (this.SailLength > 0 && this.SailType != sail)
+            { return false; }
+
+            var assetLoc = new AssetLocation("millwright:" + sail);
+            var sailStack = new ItemStack(this.Api.World.GetItem(assetLoc));
             if (!slot.Itemstack.Equals(this.Api.World, sailStack, GlobalConstants.IgnoredStackAttributes))
             {
                 return false;
@@ -118,6 +160,8 @@ namespace Millwright.ModSystem
                 slot.MarkDirty();
             }
             this.SailLength++;
+            this.SailType = sail;
+
             this.updateShape(this.Api.World);
 
             this.Blockentity.MarkDirty(true);
@@ -162,13 +206,14 @@ namespace Millwright.ModSystem
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
             this.SailLength = tree.GetInt("sailLength");
-
+            this.SailType = tree.GetString("sailType");
             base.FromTreeAttributes(tree, worldAccessForResolve);
         }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             tree.SetInt("sailLength", this.SailLength);
+            tree.SetString("sailType", this.SailType);
             base.ToTreeAttributes(tree);
         }
 
@@ -189,9 +234,16 @@ namespace Millwright.ModSystem
             }
             else
             {
+                //for downwards compatibility
+                var sail = "";
+                if (this.SailType == null || this.SailType == "")
+                { sail = "sailcentered"; }
+                else
+                { sail = this.SailType; }
+
                 this.Shape = new CompositeShape()
                 {
-                    Base = new AssetLocation("millwright:block/wood/mechanics/double/centered/windmill-" + this.SailLength + "blade"),
+                    Base = new AssetLocation("millwright:block/wood/mechanics/double/" + sail + "/windmill-" + this.SailLength + "blade"),
                     rotateY = this.Block.Shape.rotateY
                 };
             }

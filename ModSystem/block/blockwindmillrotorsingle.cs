@@ -79,21 +79,37 @@ namespace Millwright.ModSystem
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             var be = world.BlockAccessor.GetBlockEntity(selection.Position)?.GetBehavior<BEBehaviorWindmillRotorSingle>();
-            if (be != null && be.SailLength >= 3)
+            if (be != null && be.SailLength >= 5)
             {
                 return new WorldInteraction[0];
             }
 
+            if (be != null && be.SailType != null && be.SailType != "")
+            {
+                return new WorldInteraction[]
+                 {
+                        new WorldInteraction()
+                        {
+                            ActionLangCode = "game:heldhelp-addsails",
+                            MouseButton = EnumMouseButton.Right,
+                            Itemstacks = new ItemStack[] {
+                                new ItemStack(world.GetItem(new AssetLocation("millwright:"+ be.SailType)), 4)
+                            }
+                        }
+                 };
+            };
             return new WorldInteraction[]
             {
                 new WorldInteraction()
                 {
                     ActionLangCode = "game:heldhelp-addsails",
                     MouseButton = EnumMouseButton.Right,
-                    Itemstacks = new ItemStack[] { new ItemStack(world.GetItem(new AssetLocation("millwright:sailcentered")), 4) }
+                    Itemstacks = new ItemStack[] {
+                        new ItemStack(world.GetItem(new AssetLocation("millwright:sailcentered")), 4),
+                        new ItemStack(world.GetItem(new AssetLocation("millwright:sailangled")), 4)
+                    }
                 }
             };
         }
-
     }
 }

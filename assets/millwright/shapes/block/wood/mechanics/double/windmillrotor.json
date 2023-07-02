@@ -8,8 +8,6 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"iron": "game:block/metal/plate/iron",
-		"wood": "game:block/wood/planks/generic"
 	},
 	"elements": [
 		{
@@ -230,6 +228,20 @@
 				"west": { "texture": "#iron", "uv": [ 9.0, 1.5, 10.5, 5.5 ] },
 				"up": { "texture": "#iron", "uv": [ 1.5, 7.0, 5.0, 8.5 ], "autoUv": false },
 				"down": { "texture": "#iron", "uv": [ 3.0, 10.5, 7.0, 12.0 ], "autoUv": false }
+			}
+		},
+		{
+			"name": "rotor",
+			"from": [ 0.0, 7.0, 0.0 ], 
+			"to": [ 0.0, 7.0, 0.0 ], 
+			"rotationOrigin": [ 8.0, 8.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 6.5, 12.0, 7.0, 12.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 3.0, 14.0, 3.5, 14.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 11.5, 9.0, 12.0, 9.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 11.0, 11.5, 11.5, 12.0 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 12.0, 15.0, 12.5, 15.5 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 6.0, 2.5, 6.5, 3.0 ], "enabled": false }
 			}
 		}
 	]}
