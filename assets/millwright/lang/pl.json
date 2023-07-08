@@ -1,0 +1,10 @@
+{
+  "game:tabname-millwright": "Młynarz",
+  "block-windmillrotor-three-*": "Rotor wiatraka z trzema żaglami (wzmocniony)",
+  "block-windmillrotor-single-*": "Rotor wiatraka z czterema żaglami (wzmocniony)",
+  "block-windmillrotor-six-*": "Rotor wiatraka z sześcioma żaglami (wzmocniony)",
+  "block-windmillrotor-double-*": "Rotor wiatraka z ośmioma żaglami (wzmocniony)",
+  "item-sailcentered": "Żagiel (wyśrodkowany)",
+  "item-sailangled": "Żagiel (skośny)",
+  "itemdesc-sail*": "Część do wiatraka"
+}
