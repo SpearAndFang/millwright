@@ -120,5 +120,89 @@
       "code": "millwright:windmillrotor-double-north",
       "quantity": 1
     }
+  },
+  {
+    "ingredientPattern": "_H_,_CM,ELF",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "L": {
+        "type": "block",
+        "code": "game:log-placed-*-ud",
+        "name": "wood",
+        "quantity": 1
+      },
+      "E": {
+        "type": "item",
+        "code": "game:resin"
+      },
+      "M": {
+        "type": "item",
+        "code": "game:metalplate-iron"
+      },
+      "F": {
+        "type": "item",
+        "code": "game:fat"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "millwright:windmillrotor-three-north",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "_H_,_CM,ELF",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "L": {
+        "type": "block",
+        "code": "game:log-placed-*-ud",
+        "name": "wood",
+        "quantity": 3
+      },
+      "E": {
+        "type": "item",
+        "code": "game:resin"
+      },
+      "M": {
+        "type": "item",
+        "code": "game:metalplate-iron"
+      },
+      "F": {
+        "type": "item",
+        "code": "game:fat"
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "millwright:windmillrotor-six-north",
+      "quantity": 1
+    }
   }
 ]

@@ -1,7 +1,9 @@
 {
   "game:tabname-millwright": "Millwright",
-  "block-windmillrotor-single-*": "Windmill rotor (reinforced)",
-  "block-windmillrotor-double-*": "Double Windmill rotor (reinforced)",
+  "block-windmillrotor-three-*": "Three sail windmill rotor (reinforced)",
+  "block-windmillrotor-single-*": "Four sail windmill rotor (reinforced)",
+  "block-windmillrotor-six-*": "Six sail windmill rotor (reinforced)",
+  "block-windmillrotor-double-*": "Eight sail windmill rotor (reinforced)",
   "item-sailcentered": "Sail (centered)",
   "item-sailangled": "Sail (angled)",
   "itemdesc-sail*": "Windmill component"

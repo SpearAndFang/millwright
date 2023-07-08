@@ -1,14 +1,8 @@
 {
   "code": "windmillrotor",
-  "classByType": {
-    "*-single-*": "BlockWindmillRotorSingle",
-    "*-double-*": "BlockWindmillRotorDouble"
-  },
+  "class": "BlockWindmillRotorEnhanced",
   "entityClass": "Generic",
-  "entityBehaviorsByType": {
-    "*-single-*": [ { "name": "MPWindmillRotorSingle" } ],
-    "*-double-*": [ { "name": "MPWindmillRotorDouble" } ]
-  },
+  "entityBehaviors": [ { "name": "BEBehaviorWindmillRotorEnhanced" } ],
   "behaviors": [ { "name": "HorizontalOrientable" } ],
   "attributes": {
     "handbook": {
@@ -18,7 +12,7 @@
   "variantgroups": [
     {
       "code": "type",
-      "states": [ "single", "double" ]
+      "states": [ "single", "double", "three", "six" ]
     },
     {
       "code": "side",

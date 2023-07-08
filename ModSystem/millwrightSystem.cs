@@ -7,10 +7,8 @@ namespace Millwright.ModSystem
     {
         public void RegisterClasses(ICoreAPI api)
         {
-            api.RegisterBlockClass("BlockWindmillRotorSingle", typeof(BlockWindmillRotorSingle));
-            api.RegisterBlockClass("BlockWindmillRotorDouble", typeof(BlockWindmillRotorDouble));
-            api.RegisterBlockEntityBehaviorClass("MPWindmillRotorSingle", typeof(BEBehaviorWindmillRotorSingle));
-            api.RegisterBlockEntityBehaviorClass("MPWindmillRotorDouble", typeof(BEBehaviorWindmillRotorDouble));
+            api.RegisterBlockClass("BlockWindmillRotorEnhanced", typeof(BlockWindmillRotorEnhanced));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorEnhanced", typeof(BEBehaviorWindmillRotorEnhanced));
         }
         public override void Start(ICoreAPI api)
         {
