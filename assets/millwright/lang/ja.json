@@ -1,15 +1,15 @@
 {
   "comment_description": "Japanese localization file for 'Millwright'.",
-  "comment_version": "Mod Version: v1.0.4",
+  "comment_version": "Mod Version: v1.0.5",
   "comment_author": "Translated By: Macoto Hino",
   "comment_technical_details": "Machine translation using PCOT and DeepL.",
 
   "game:tabname-millwright": "Millwright",
-  "block-windmillrotor-three-*": "Three sail windmill rotor (reinforced)",
-  "block-windmillrotor-single-*": "風車のローター(補強済)",
-  "block-windmillrotor-six-*": "Six sail windmill rotor (reinforced)",
-  "block-windmillrotor-double-*": "風車の二重ローター(補強済)",
-  "item-sailcentered": "帆(真ん中)",
-  "item-sailangled": "帆(angled)",
+  "block-windmillrotor-three-*": "3枚帆の風車のローター(補強済)",
+  "block-windmillrotor-single-*": "4枚帆の風車のローター(補強済)",
+  "block-windmillrotor-six-*": "6枚帆の風車のローター(補強済)",
+  "block-windmillrotor-double-*": "8枚帆の風車のローター(補強済)",
+  "item-sailcentered": "帆(真ん中に軸)",
+  "item-sailangled": "帆(片側に軸)",
   "itemdesc-sail*": "風車の部品"
 }
