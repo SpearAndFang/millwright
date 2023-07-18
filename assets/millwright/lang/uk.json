@@ -1,0 +1,10 @@
+{
+    "game:tabname-millwright": "Millwright",
+    "block-windmillrotor-single-*": "Чотиривільний ротор вітряка (посилений)",
+    "block-windmillrotor-three-*": "Тривітрильний ротор вітряка (посилений)",
+    "block-windmillrotor-six-*": "Шестивітрильний ротор вітряка (посилений)",
+    "block-windmillrotor-double-*": "Восьмивітрильний ротор вітряка (посилений)",
+    "item-sailcentered": "Вітрило (посередині)",
+    "item-sailangled": "Вітрило (під кутом)",
+    "itemdesc-sail*": "Компонент вітряка"
+}
