@@ -13,6 +13,7 @@ namespace Millwright.ModSystem
         public override void Start(ICoreAPI api)
         {
             base.Start(api);
+            api.World.Logger.Event("started 'Millwright' mod");
             this.RegisterClasses(api);
         }
 
