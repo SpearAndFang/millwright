@@ -2,7 +2,7 @@
   {
     "ingredientPattern": "HC,RM",
     "enabled": true,
-    "shapeless": true,
+    "shapeless": false,
     "ingredients": {
       "H": {
         "type": "item",
@@ -34,7 +34,7 @@
   {
     "ingredientPattern": "HCS,RLE",
     "enabled": true,
-    "shapeless": true,
+    "shapeless": false,
     "ingredients": {
       "H": {
         "type": "item",
@@ -77,7 +77,7 @@
   {
     "ingredientPattern": "HCS,RLE,M__",
     "enabled": true,
-    "shapeless": true,
+    "shapeless": false,
     "ingredients": {
       "H": {
         "type": "item",
@@ -124,7 +124,7 @@
   {
     "ingredientPattern": "_H_,_CM,ELF",
     "enabled": true,
-    "shapeless": true,
+    "shapeless": false,
     "ingredients": {
       "H": {
         "type": "item",
@@ -164,9 +164,9 @@
     }
   },
   {
-    "ingredientPattern": "_H_,_CM,ELF",
+    "ingredientPattern": "_H_,LCM,ELF",
     "enabled": true,
-    "shapeless": true,
+    "shapeless": false,
     "ingredients": {
       "H": {
         "type": "item",
@@ -182,7 +182,7 @@
         "type": "block",
         "code": "game:log-placed-*-ud",
         "name": "wood",
-        "quantity": 3
+        "quantity": 1
       },
       "E": {
         "type": "item",

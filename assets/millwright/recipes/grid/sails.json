@@ -22,12 +22,12 @@
     }
   },
   {
-    "ingredientPattern": "_LS,LSL,SL_",
+    "ingredientPattern": "SL_,LSL,_LS",
     "ingredients": {
       "S": {
         "type": "item",
         "code": "game:stick",
-        "quantity": 2
+        "quantity": 1
       },
       "L": {
         "type": "block",
