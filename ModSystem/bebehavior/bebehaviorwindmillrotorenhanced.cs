@@ -31,6 +31,7 @@ namespace Millwright.ModSystem
 
         private readonly float centeredbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
         private readonly float angledbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
+        private readonly float sailRotationModifier = (float)ModConfig.Loaded.SailRotationModifier;
 
         public float bladeModifier = 1.0f;
 
@@ -235,6 +236,22 @@ namespace Millwright.ModSystem
             tree.SetInt("sailLength", this.SailLength);
             tree.SetString("sailType", this.SailType);
             base.ToTreeAttributes(tree);
+        }
+
+        public override float AngleRad
+        {
+            get
+            {
+                if (this.network == null)
+                {
+                    return this.lastKnownAngleRad;
+                }
+                if (this.isRotationReversed())
+                {
+                    return this.lastKnownAngleRad = 6.2831855f - this.network.AngleRad * this.GearedRatio * this.sailRotationModifier % 6.2831855f;
+                }
+                return this.lastKnownAngleRad = this.network.AngleRad * this.GearedRatio * this.sailRotationModifier % 6.2831855f;
+            }
         }
 
         protected override void updateShape(IWorldAccessor worldForResolve)
