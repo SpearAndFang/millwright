@@ -37,7 +37,7 @@
       "rotateY": 180
     },
     "*-west": {
-      "base": "millwright:lock/wood/mechanics/brake-stand",
+      "base": "millwright:block/wood/mechanics/brake-stand",
       "rotateY": 90
     }
   },
