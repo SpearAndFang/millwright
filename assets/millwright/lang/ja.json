@@ -11,5 +11,7 @@
   "block-windmillrotor-double-*": "8枚帆の風車のローター(補強済)",
   "item-sailcentered": "帆(真ん中に軸)",
   "item-sailangled": "帆(片側に軸)",
-  "itemdesc-sail*": "風車の部品"
+  "itemdesc-sail*": "風車の部品",
+
+  "block-brake-north": "ブレーキ (補強済)"
 }

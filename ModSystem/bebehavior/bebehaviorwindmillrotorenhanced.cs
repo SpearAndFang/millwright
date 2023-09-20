@@ -16,14 +16,13 @@ namespace Millwright.ModSystem
     {
         private WeatherSystemBase weatherSystem;
         private double windSpeed;
-
         public int SailLength { get; private set; } = 0;
         public string SailType { get; private set; } = "";
-
         private string bladeType;
         private int bladeCount;
         private AssetLocation sound;
         protected override AssetLocation Sound => this.sound;
+
         protected override float GetSoundVolume()
         {
             return (0.5f + (0.5f * (float)this.windSpeed)) * this.SailLength / 3f;
@@ -42,8 +41,8 @@ namespace Millwright.ModSystem
         protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
 
         public BEBehaviorWindmillRotorEnhanced(BlockEntity blockentity) : base(blockentity)
-        {
-        }
+        { }
+
 
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {

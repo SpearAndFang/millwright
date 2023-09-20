@@ -6,5 +6,7 @@
   "block-windmillrotor-double-*": "Eight sail windmill rotor (reinforced)",
   "item-sailcentered": "Sail (centered)",
   "item-sailangled": "Sail (angled)",
-  "itemdesc-sail*": "Windmill component"
+  "itemdesc-sail*": "Windmill component",
+
+  "block-brake-north": "Brake (reinforced)"
 }

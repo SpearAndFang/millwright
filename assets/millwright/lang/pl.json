@@ -6,5 +6,7 @@
   "block-windmillrotor-double-*": "Rotor wiatraka z ośmioma żaglami (wzmocniony)",
   "item-sailcentered": "Żagiel (wyśrodkowany)",
   "item-sailangled": "Żagiel (skośny)",
-  "itemdesc-sail*": "Część do wiatraka"
+  "itemdesc-sail*": "Część do wiatraka",
+
+  "block-brake-north": "Hamulec (wzmocniony)"
 }

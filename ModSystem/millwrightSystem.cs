@@ -9,6 +9,10 @@ namespace Millwright.ModSystem
         {
             api.RegisterBlockClass("BlockWindmillRotorEnhanced", typeof(BlockWindmillRotorEnhanced));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorEnhanced", typeof(BEBehaviorWindmillRotorEnhanced));
+
+            api.RegisterBlockClass("BlockBrakeEnhanced", typeof(BlockBrakeEnhanced));
+            api.RegisterBlockEntityClass("BEBrakeEnhanced", typeof(BEBrakeEnhanced));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorBrakeEnhanced", typeof(BEBehaviorBrakeEnhanced));
         }
         public override void Start(ICoreAPI api)
         {
