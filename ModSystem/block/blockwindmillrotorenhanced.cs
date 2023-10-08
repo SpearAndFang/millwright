@@ -118,7 +118,8 @@ namespace Millwright.ModSystem
                     MouseButton = EnumMouseButton.Right,
                     Itemstacks = new ItemStack[] {
                         new ItemStack(world.GetItem(new AssetLocation("millwright:sailcentered")), this.bladeCount),
-                        new ItemStack(world.GetItem(new AssetLocation("millwright:sailangled")), this.bladeCount)
+                        new ItemStack(world.GetItem(new AssetLocation("millwright:sailangled")), this.bladeCount),
+                        new ItemStack(world.GetItem(new AssetLocation("millwright:sailwide")), this.bladeCount)
                     }
                 }
             };

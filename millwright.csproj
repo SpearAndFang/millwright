@@ -92,6 +92,7 @@
     <None Remove="assets\millwright\blocktypes\mechanics\axlepassthroughfull.json" />
     <None Remove="assets\millwright\itemtypes\resource\sailangled.json" />
     <None Remove="assets\millwright\itemtypes\resource\sailcentered.json" />
+    <None Remove="assets\millwright\itemtypes\resource\sailwide.json" />
     <None Remove="assets\millwright\recipes\grid\axlepassthrough.json" />
     <None Remove="assets\millwright\recipes\grid\sails.json" />
     <None Remove="assets\millwright\recipes\grid\windmillrotor.json" />

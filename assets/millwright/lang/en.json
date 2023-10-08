@@ -6,12 +6,10 @@
   "block-windmillrotor-double-*": "Eight sail windmill rotor (reinforced)",
   "item-sailcentered": "Sail (centered)",
   "item-sailangled": "Sail (angled)",
-  "itemdesc-sail*": "Windmill component",
-
+  "item-sailwide": "Sail (wide)",
+  "itemdesc-sail*": "Windmill component. Requires a reinforced windmill rotor",
   "block-brake-north": "Brake (reinforced)",
-
   "block-woodenaxlepassthrough*": "Wooden axle (passthrough)",
   "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity",
   "blockdesc-suitable-block-needed": "you need a more suitable block to support this axle"
-
 }

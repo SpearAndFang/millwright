@@ -30,6 +30,7 @@ namespace Millwright.ModSystem
 
         private readonly float centeredbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
         private readonly float angledbladeModifier = (float)ModConfig.Loaded.SailCenteredModifier;
+        private readonly float widebladeModifier = (float)ModConfig.Loaded.SailWideModifier;
         private readonly float sailRotationModifier = (float)ModConfig.Loaded.SailRotationModifier;
 
         public float bladeModifier = 1.0f;
@@ -48,6 +49,8 @@ namespace Millwright.ModSystem
         {
             if (this.SailType == "sailangled")
             { this.bladeModifier = this.angledbladeModifier; }
+            else if (this.SailType == "sailwide")
+            { this.bladeModifier = this.widebladeModifier; }
             else
             { this.bladeModifier = this.centeredbladeModifier; }
 

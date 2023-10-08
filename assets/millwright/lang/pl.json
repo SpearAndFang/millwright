@@ -6,10 +6,9 @@
   "block-windmillrotor-double-*": "Rotor wiatraka z ośmioma żaglami (wzmocniony)",
   "item-sailcentered": "Żagiel (wyśrodkowany)",
   "item-sailangled": "Żagiel (skośny)",
-  "itemdesc-sail*": "Część do wiatraka",
-
+  "item-sailwide": "Żagiel (wide)",
+  "itemdesc-sail*": "Część do wiatraka. Requires a reinforced windmill rotor",
   "block-brake-north": "Hamulec (wzmocniony)",
-
   "block-woodenaxlepassthrough*": "Drewniana oś (passthrough)",
   "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity",
   "blockdesc-suitable-block-needed": "you need a more suitable block to support this axle"
