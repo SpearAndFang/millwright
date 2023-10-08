@@ -2,8 +2,8 @@
   "type": "code",
   "modid": "millwright",
   "name": "Millwright",
-  "authors": [ "SpearAndFang" ],
+  "authors": ["SpearAndFang"],
   "description": "Building better windmills since 1386.",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "dependencies": {}
 }

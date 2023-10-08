@@ -13,5 +13,9 @@
   "item-sailangled": "帆(片側に軸)",
   "itemdesc-sail*": "風車の部品",
 
-  "block-brake-north": "ブレーキ (補強済)"
+  "block-brake-north": "ブレーキ (補強済)",
+
+  "block-woodenaxlepassthrough*": "木の軸 (passthrough)",
+  "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity",
+  "blockdesc-suitable-block-needed": "you need a more suitable block to support this axle"
 }

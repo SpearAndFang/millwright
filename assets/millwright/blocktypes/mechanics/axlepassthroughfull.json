@@ -1,0 +1,101 @@
+{
+  "code": "woodenaxlepassthroughfull",
+  "class": "BlockAxlePassthroughfull",
+  "creativeinventory": {
+    "general": [ "*" ],
+    "mechanics": [ "*" ],
+    "millwright": [ "*" ]
+  },
+  "shape": {
+    "base": "millwright:block/wood/mechanics/axle-passthrough-full"
+  },
+  "blockmaterial": "Wood",
+  "materialDensity": 450,
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" }
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": true,
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 16,
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": -84,
+      "y": -3,
+      "z": 6
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.35,
+      "z": 0.38
+    },
+    "scale": 2.7
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -55,
+      "y": -31,
+      "z": 33
+    },
+    "origin": {
+      "x": 1,
+      "y": 0.5,
+      "z": 0.5
+    },
+    "scale": 1.88
+  },
+  "fpHandTransform": {
+    "translation": {
+      "x": 0,
+      "y": -0.25,
+      "z": 0.5
+    },
+    "rotation": {
+      "x": 3,
+      "y": -25,
+      "z": 90
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.7,
+      "z": 1
+    },
+    "scale": 1.07
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.5,
+      "y": -0.4,
+      "z": -0.9
+    },
+    "rotation": {
+      "x": 1,
+      "y": -1,
+      "z": -2
+    },
+    "origin": {
+      "x": 0.6,
+      "y": -0.05,
+      "z": 0.5
+    },
+    "scale": 0.55
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}

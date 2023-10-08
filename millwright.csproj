@@ -89,8 +89,10 @@
     <Content Remove="assets\millwright\patches\**" />
     <EmbeddedResource Remove="assets\millwright\patches\**" />
     <None Remove="assets\millwright\patches\**" />
+    <None Remove="assets\millwright\blocktypes\mechanics\axlepassthroughfull.json" />
     <None Remove="assets\millwright\itemtypes\resource\sailangled.json" />
     <None Remove="assets\millwright\itemtypes\resource\sailcentered.json" />
+    <None Remove="assets\millwright\recipes\grid\axlepassthrough.json" />
     <None Remove="assets\millwright\recipes\grid\sails.json" />
     <None Remove="assets\millwright\recipes\grid\windmillrotor.json" />
     <None Update="modinfo.json">

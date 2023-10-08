@@ -13,6 +13,12 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockBrakeEnhanced", typeof(BlockBrakeEnhanced));
             api.RegisterBlockEntityClass("BEBrakeEnhanced", typeof(BEBrakeEnhanced));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorBrakeEnhanced", typeof(BEBehaviorBrakeEnhanced));
+
+            api.RegisterBlockClass("BlockAxlePassthrough", typeof(BlockAxlePassthrough));
+            api.RegisterBlockClass("BlockAxlePassthroughfull", typeof(BlockAxlePassthroughFull));
+            api.RegisterBlockEntityClass("BEAxlePassThrough", typeof(BEAxlePassThrough));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorAxlePassthrough", typeof(BEBehaviorAxlePassthrough));
+
         }
         public override void Start(ICoreAPI api)
         {

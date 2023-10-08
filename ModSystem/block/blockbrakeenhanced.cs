@@ -36,10 +36,10 @@ namespace Millwright.ModSystem
             var rightFacing = BlockFacing.HORIZONTALS_ANGLEORDER[GameMath.Mod(ownFacing.HorizontalAngleIndex + 1, 4)];
 
             if (world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(leftFacing)) is IMechanicalPowerBlock leftBlock)
-                return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, orientedBlock, leftBlock, leftFacing);
+            { return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, orientedBlock, leftBlock, leftFacing); }
 
             if (world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(rightFacing)) is IMechanicalPowerBlock rightBlock)
-                return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, orientedBlock, rightBlock, rightFacing);
+            { return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, orientedBlock, rightBlock, rightFacing); }
 
 
             var frontFacing = ownFacing;
@@ -47,10 +47,10 @@ namespace Millwright.ModSystem
             var rotBlock = world.GetBlock(orientedBlock.CodeWithVariant("side", leftFacing.Code));
 
             if (world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(frontFacing)) is IMechanicalPowerBlock frontBlock)
-                return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, rotBlock, frontBlock, frontFacing);
+            { return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, rotBlock, frontBlock, frontFacing); }
 
             if (world.BlockAccessor.GetBlock(blockSel.Position.AddCopy(backFacing)) is IMechanicalPowerBlock backBlock)
-                return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, rotBlock, backBlock, backFacing);
+            { return this.DoPlaceMechBlock(world, byPlayer, itemstack, blockSel, rotBlock, backBlock, backFacing); }
 
 
             if (base.TryPlaceBlock(world, byPlayer, itemstack, blockSel, ref failureCode))
