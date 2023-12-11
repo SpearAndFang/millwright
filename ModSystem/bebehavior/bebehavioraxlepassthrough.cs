@@ -20,7 +20,7 @@ namespace Millwright.ModSystem
         AssetLocation axlePlate;
 
 
-        public BEBehaviorAxlePassthrough(BlockEntity blockentity) : base(blockentity)
+        public BEBehaviorAxlePassthrough(BlockEntity BEAxlePassThrough) : base(BEAxlePassThrough)
         { }
         protected virtual bool AddPlate => true;
 

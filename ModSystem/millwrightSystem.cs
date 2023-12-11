@@ -18,8 +18,9 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockAxlePassthroughfull", typeof(BlockAxlePassthroughFull));
             api.RegisterBlockEntityClass("BEAxlePassThrough", typeof(BEAxlePassThrough));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorAxlePassthrough", typeof(BEBehaviorAxlePassthrough));
-
         }
+
+
         public override void Start(ICoreAPI api)
         {
             base.Start(api);
