@@ -41,6 +41,9 @@ namespace Millwright.ModSystem
             }
             catch
             { api.StoreModConfig(ModConfig.Loaded, cfgFileName); }
+
+            api.World.Config.SetBool("AllowSailDeconstruction", ModConfig.Loaded.AllowSailDeconstruction);
+
             base.StartPre(api);
         }
     }

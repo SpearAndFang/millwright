@@ -193,7 +193,7 @@ namespace Millwright.ModSystem
 
         private bool Obstructed(int len)
         {
-            var tmpPos = new BlockPos();
+            var tmpPos = new BlockPos(0,0,0,0);
 
             for (var dxz = -len; dxz <= len; dxz++)
             {
