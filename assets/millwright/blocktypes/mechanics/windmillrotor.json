@@ -1,0 +1,107 @@
+{
+  "code": "windmillrotor",
+  "class": "BlockWindmillRotorEnhanced",
+  "entityClass": "Generic",
+  "entityBehaviors": [ { "name": "BEBehaviorWindmillRotorEnhanced" } ],
+  "behaviors": [ { "name": "HorizontalOrientable" } ],
+  "attributes": {
+    "handbook": {
+      "groupBy": [ "windmillrotor-{type}-*" ]
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "single", "double", "three", "six" ]
+    },
+    {
+      "code": "side",
+      "loadFromProperties": "abstract/horizontalorientation"
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*-north" ],
+    "mechanics": [ "*-north" ],
+    "millwright": [ "*-north" ]
+  },
+  "shapebytype": {
+    "*-north": {
+      "base": "millwright:block/wood/mechanics/{type}/windmillrotor",
+      "rotateY": 90
+    },
+    "*-east": {
+      "base": "millwright:block/wood/mechanics/{type}/windmillrotor",
+      "rotateY": 0
+    },
+    "*-south": {
+      "base": "millwright:block/wood/mechanics/{type}/windmillrotor",
+      "rotateY": 270
+    },
+    "*-west": {
+      "base": "millwright:block/wood/mechanics/{type}/windmillrotor",
+      "rotateY": 180
+    }
+  },
+  "blockmaterial": "Wood",
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" },
+    "cloth": { "base": "game:block/cloth/linen/normal1" }
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": true,
+  "drops": [
+    {
+      "type": "block",
+      "code": "millwright:windmillrotor-{type}-north"
+    }
+  ],
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 4,
+  "guiTransform": {
+    "origin": {
+      "x": 0.45,
+      "y": 0.5,
+      "z": 0.5
+    },
+    "scale": 1.74
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.2,
+      "y": -1,
+      "z": -1
+    },
+    "scale": 0.5
+  },
+  "groundTransform": {
+    "translation": {
+      "x": -0.08,
+      "y": 0.04,
+      "z": 0.2
+    },
+    "rotation": {
+      "x": -37,
+      "y": -44,
+      "z": 21
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.1
+    },
+    "scale": 2.9
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}

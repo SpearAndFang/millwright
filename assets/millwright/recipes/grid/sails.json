@@ -1,0 +1,164 @@
+[
+  {
+    "ingredientPattern": "_LS,LSL,SL_",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 4
+      },
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 2
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailcentered",
+      "quantity": 4
+    }
+  },
+  {
+    "ingredientPattern": "SL_,LSL,_LS",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 2
+      },
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 2
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailangled",
+      "quantity": 4
+    }
+  },
+  {
+    "ingredientPattern": "SL_,_SL,__S",
+    "ingredients": {
+      "S": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 4
+      },
+      "L": {
+        "type": "block",
+        "code": "game:linen-*",
+        "quantity": 4
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailwide",
+      "quantity": 4
+    }
+  },
+  {
+    "ingredientPattern": "KS",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "millwright:sailcentered",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "game:linen-normal-down",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "KS",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "millwright:sailangled",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "game:linen-normal-down",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "KS",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "millwright:sailwide",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "game:linen-normal-down",
+      "quantity": 2
+    }
+  },
+  {
+    "ingredientPattern": "KS",
+    "enabled": true,
+    "shapeless": true,
+    "ingredients": {
+      "K": {
+        "type": "item",
+        "code": "game:knife-*",
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "game:sail",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "game:linen-normal-down",
+      "quantity": 1
+    }
+  }
+]

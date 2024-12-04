@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "file": "millwright.json",
+  "settings": {
+    "float": {
+      "BRAKERESISTANCEMODIFIER": {
+        "name": "BrakeResistanceModifier",
+        "ingui": "millwright:BrakeResistanceModifier",
+        "weight": 2,
+        "comment": "millwright:BrakeResistanceModifier-Comment",
+
+        "default": 2.0,
+        "range": {
+          "min": 0.1,
+          "max": 4.0
+        }
+      },
+      "SAILCENTEREDMODIFIER": {
+        "name": "SailCenteredModifier",
+        "ingui": "millwright:SailCenteredModifier",
+        "weight": 3,
+        "comment": "millwright:SailCenteredModifier-Comment",
+
+        "default": 2.0,
+        "range": {
+          "min": 0.1,
+          "max": 4.0
+        }
+      },
+      "SAILANGLEDMODIFIER": {
+        "name": "SailAngledModifier",
+        "ingui": "millwright:SailAngledModifier",
+        "weight": 4,
+        "comment": "millwright:SailAngledModifier-Comment",
+
+        "default": 2.0,
+        "range": {
+          "min": 0.1,
+          "max": 4.0
+        }
+      },
+      "SAILWIDEMODIFIER": {
+        "name": "SailWideModifier",
+        "ingui": "millwright:SailWideModifier",
+        "weight": 5,
+        "comment": "millwright:SailWideModifier-Comment",
+
+        "default": 2.0,
+        "range": {
+          "min": 0.1,
+          "max": 4.0
+        }
+      },
+      "SAILROTATIONMODIFIER": {
+        "name": "SailRotationModifier",
+        "ingui": "millwright:SailRotationModifier",
+        "weight": 6,
+        "comment": "millwright:SailRotationModifier-Comment",
+
+        "default": 1.0,
+        "range": {
+          "min": 0.1,
+          "max": 1.0
+        }
+      }
+    },
+    "boolean": {
+      "ALLOWSAILDECONSTRUCTION": {
+        "name": "AllowSailDeconstruction",
+        "ingui": "millwright:AllowSailDeconstruction",
+        "weight": 1,
+        "comment": "millwright:AllowSailDeconstruction-Comment",
+        "default": true
+      }
+    }
+  }
+}

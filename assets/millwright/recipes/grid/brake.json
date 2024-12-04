@@ -1,0 +1,33 @@
+[
+  {
+    "ingredientPattern": "H__,CM_,SFR",
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true,
+        "toolDurabilityCost": 60
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true,
+        "toolDurabilityCost": 40
+      },
+      "M": {
+        "type": "item",
+        "code": "game:metalplate-iron"
+      },
+      "S": { "type": "block", "code": "game:log-placed-*-ud", "name": "wood" },
+      "F": { "type": "block", "code": "game:woodenaxle-ud" },
+      "R": { "type": "item", "code": "game:resin", "quantity": 2 }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "millwright:brake-north",
+      "quantity": 1
+    }
+  }
+]

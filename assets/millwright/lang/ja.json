@@ -1,0 +1,33 @@
+{
+  "comment_description": "Japanese localization file for 'Millwright'.",
+  "comment_version": "Mod Version: v1.1.2",
+  "comment_author": "Translated By: Macoto Hino",
+  "comment_technical_details": "Machine translation using PCOT and DeepL.",
+
+  "game:tabname-millwright": "Millwright",
+  "block-windmillrotor-three-*": "3枚帆の風車のローター(補強済)",
+  "block-windmillrotor-single-*": "4枚帆の風車のローター(補強済)",
+  "block-windmillrotor-six-*": "6枚帆の風車のローター(補強済)",
+  "block-windmillrotor-double-*": "8枚帆の風車のローター(補強済)",
+  "item-sailcentered": "帆(真ん中に軸)",
+  "item-sailangled": "帆(片側に軸)",
+  "item-sailwide": "帆(幅広)",
+  "itemdesc-sail*": "風車の部品。強化済の風車のローターが必要",
+  "block-brake-north": "ブレーキ(補強済)",
+  "block-woodenaxlepassthrough*": "木の軸(パススルー)",
+  "blockdesc-woodenaxlepassthrough*": "フルブロックの両側に1つずつ配置することで、部屋の整合性を保ちながら動力を伝達出来る",
+  "blockdesc-suitable-block-needed": "この軸を支えるには、もっと適切なブロックが必要",
+
+  "AllowSailDeconstruction": "Allow Sail Deconstruction",
+  "AllowSailDeconstruction-Comment": "Disable to prevent recovering linen from sails in the crafting grid.",
+  "BrakeResistanceModifier": "Brake Resistance",
+  "BrakeResistanceModifier-Comment": "Braking resistance modifier for reinforced brakes.",
+  "SailCenteredModifier": "Sail Centered",
+  "SailCenteredModifier-Comment": "Output power modifier for the improved \"centered\" sails.",
+  "SailAngledModifier": "Sail Angled",
+  "SailAngledModifier-Comment": "Output power modifier for the improved \"angled\" sails.",
+  "SailWideModifier": "Sail Wide",
+  "SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
+  "SailRotationModifier": "Sail Rotation",
+  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+}

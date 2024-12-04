@@ -1,0 +1,227 @@
+{
+  "code": "woodenaxlepassthrough",
+  "class": "BlockAxlePassthrough",
+  "entityClass": "BEAxlePassThrough",
+  "entityBehaviors": [ { "name": "BEBehaviorAxlePassthrough" } ],
+  "behaviors": [
+    {
+      "name": "Pillar",
+      "properties": { "invertedPlacement": true }
+    }
+  ],
+  "attributes": {
+    "handbook": { "exclude": true }
+  },
+  "creativeinventory": {
+  },
+  "variantgroups": [
+    {
+      "code": "rotation",
+      "states": [ "ud", "ns", "we", "du", "sn", "ew" ]
+    }
+  ],
+  "shapeByType": {
+    "*-ud": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateZ": 90
+    },
+    "*-ns": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateY": 90
+    },
+    "*-we": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateY": 180
+    },
+    "*-du": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateZ": 270
+    },
+    "*-sn": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateY": 270
+    },
+    "*-ew": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough",
+      "rotateY": 0
+    }
+  },
+  "blockmaterial": "Wood",
+  "materialDensity": 450,
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" }
+  },
+  "faceCullMode": "MergeMaterial",
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": true,
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 16,
+  "drops": [
+    {
+      "type": "block",
+      "code": "millwright:woodenaxlepassthroughfull",
+      "quantity": { "avg": 1 }
+    }
+  ],
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": -90,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.45,
+      "z": 0.38
+    },
+    "scale": 2.7
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -55,
+      "y": -10,
+      "z": -43
+    },
+    "scale": 1.88
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.5,
+      "y": -0.4,
+      "z": -0.9
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 90
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.25,
+      "z": 0.5
+    },
+    "scale": 0.55
+  },
+  "collisionSelectionBoxByType": {
+    "*-we": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 1,
+      "y2": 0.875,
+      "z2": 0.75
+    },
+    "*-ns": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 1,
+      "y2": 0.875,
+      "z2": 0.75,
+      "rotateY": 90
+    },
+    "*-ud": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 0.75,
+      "y2": 1,
+      "z2": 0.75
+    },
+    "*-ew": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 1,
+      "y2": 0.875,
+      "z2": 0.75
+    },
+    "*-sn": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 1,
+      "y2": 0.875,
+      "z2": 0.75,
+      "rotateY": 90
+    },
+    "*-du": {
+      "x1": 0.25,
+      "y1": 0,
+      "z1": 0.25,
+      "x2": 0.75,
+      "y2": 1,
+      "z2": 0.75
+    }
+  },
+  "particleCollisionBoxByType": {
+    "*-we": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625
+    },
+    "*-ns": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625,
+      "rotateY": 90
+    },
+    "*-ud": {
+      "x1": 0.375,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.625,
+      "y2": 1,
+      "z2": 0.625
+    },
+    "*-ew": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625
+    },
+    "*-sn": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 1,
+      "y2": 0.625,
+      "z2": 0.625,
+      "rotateY": 90
+    },
+    "*-du": {
+      "x1": 0.375,
+      "y1": 0,
+      "z1": 0.375,
+      "x2": 0.625,
+      "y2": 1,
+      "z2": 0.625
+    }
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}

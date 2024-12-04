@@ -1,0 +1,28 @@
+{
+  "game:tabname-millwright": "Millwright",
+  "block-windmillrotor-three-*": "Three sail windmill rotor (reinforced)",
+  "block-windmillrotor-single-*": "Four sail windmill rotor (reinforced)",
+  "block-windmillrotor-six-*": "Six sail windmill rotor (reinforced)",
+  "block-windmillrotor-double-*": "Eight sail windmill rotor (reinforced)",
+  "item-sailcentered": "Sail (centered)",
+  "item-sailangled": "Sail (angled)",
+  "item-sailwide": "Sail (wide)",
+  "itemdesc-sail*": "Windmill component. Requires a reinforced windmill rotor",
+  "block-brake-north": "Brake (reinforced)",
+  "block-woodenaxlepassthrough*": "Wooden axle (passthrough)",
+  "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity",
+  "blockdesc-suitable-block-needed": "you need a more suitable block to support this axle",
+  
+  "AllowSailDeconstruction": "Allow Sail Deconstruction",
+  "AllowSailDeconstruction-Comment": "Disable to prevent recovering linen from sails in the crafting grid.",
+  "BrakeResistanceModifier": "Brake Resistance",
+  "BrakeResistanceModifier-Comment": "Braking resistance modifier for reinforced brakes.",
+  "SailCenteredModifier": "Sail Centered",
+  "SailCenteredModifier-Comment": "Output power modifier for the improved \"centered\" sails.",
+  "SailAngledModifier": "Sail Angled",
+  "SailAngledModifier-Comment": "Output power modifier for the improved \"angled\" sails.",
+  "SailWideModifier": "Sail Wide",
+  "SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
+  "SailRotationModifier": "Sail Rotation",
+  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+}

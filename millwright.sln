@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "millwright", "millwright.csproj", "{90C0F39A-274B-4490-81A7-E12718686FAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90C0F39A-274B-4490-81A7-E12718686FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C0F39A-274B-4490-81A7-E12718686FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C0F39A-274B-4490-81A7-E12718686FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C0F39A-274B-4490-81A7-E12718686FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49980444-CE49-4891-BA5F-26D033112B9E}
+	EndGlobalSection
+EndGlobal

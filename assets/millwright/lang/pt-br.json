@@ -1,0 +1,28 @@
+{
+	"game:tabname-millwright": "Millwright",
+	"block-windmillrotor-three-*": "Tri-Rotor de moinho de vento (reforçado)",
+	"block-windmillrotor-single-*": "Tetra-Rotor de moinho de vento (reforçado)",
+	"block-windmillrotor-six-*": "Hexa-Rotor de moinho de vento (reforçado)",
+	"block-windmillrotor-double-*": "Octa-Rotor de moinho de vento (reforçado)",
+	"item-sailcentered": "Vela (centralizada)",
+	"item-sailangled": "Vela (inclinada)",
+	"item-sailwide": "Vela (larga)",
+	"itemdesc-sail*": "Componente de moinho. Requer um rotor de moinho reforçado",
+	"block-brake-north": "Freio (reforçado)",
+	"block-woodenaxlepassthrough*": "Conduíte Eixo de madeira",
+	"blockdesc-woodenaxlepassthrough*": "Coloque em lados opostos de um bloco inteiro para transferir força enquanto mantém a integridade da sala",
+	"blockdesc-suitable-block-needed": "Você precisa de um bloco mais apropriado para suportar este eixo",
+
+	"AllowSailDeconstruction": "Allow Sail Deconstruction",
+	"AllowSailDeconstruction-Comment": "Disable to prevent recovering linen from sails in the crafting grid.",
+	"BrakeResistanceModifier": "Brake Resistance",
+	"BrakeResistanceModifier-Comment": "Braking resistance modifier for reinforced brakes.",
+	"SailCenteredModifier": "Sail Centered",
+	"SailCenteredModifier-Comment": "Output power modifier for the improved \"centered\" sails.",
+	"SailAngledModifier": "Sail Angled",
+	"SailAngledModifier-Comment": "Output power modifier for the improved \"angled\" sails.",
+	"SailWideModifier": "Sail Wide",
+	"SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
+	"SailRotationModifier": "Sail Rotation",
+	"SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+}

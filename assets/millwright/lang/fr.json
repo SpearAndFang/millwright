@@ -1,0 +1,28 @@
+{
+  "game:tabname-millwright": "Millwright",
+  "block-windmillrotor-three-*": "Rotor de moulin à trois voiles (renforcé)",
+  "block-windmillrotor-single-*": "Rotor de moulin à quatre voiles (renforcé)",
+  "block-windmillrotor-six-*": "Rotor de moulin à six voiles (renforcé)",
+  "block-windmillrotor-double-*": "Rotor de moulin à huit voiles (renforcé)",
+  "item-sailcentered": "Voile (centrée)",
+  "item-sailangled": "Voile (angulaire)",
+  "item-sailwide": "Voile (large)",
+  "itemdesc-sail*": "Composant de moulin. Nécessite un rotor de moulin renforcé",
+  "block-brake-north": "Frein (renforcé)",
+  "block-woodenaxlepassthrough*": "Axe en bois (traversant)",
+  "blockdesc-woodenaxlepassthrough*": "Placez-en un de chaque côté d'un bloc complet pour transférer la puissance tout en maintenant l'intégrité de la pièce fermée",
+  "blockdesc-suitable-block-needed": "vous avez besoin d'un bloc plus adapté pour supporter cet axe",
+
+  "AllowSailDeconstruction": "Autoriser la déconstruction des voiles",
+  "AllowSailDeconstruction-Comment": "Désactiver pour empêcher la récupération du lin à partir des voiles dans la grille de fabrication.",
+  "BrakeResistanceModifier": "Résistance du frein",
+  "BrakeResistanceModifier-Comment": "Modificateur de résistance de freinage pour les freins renforcés.",
+  "SailCenteredModifier": "Voile centrée",
+  "SailCenteredModifier-Comment": "Modificateur de puissance de sortie pour les voiles \"centrées\" améliorées.",
+  "SailAngledModifier": "Voile angulaire",
+  "SailAngledModifier-Comment": "Modificateur de puissance de sortie pour les voiles \"angulaires\" améliorées.",
+  "SailWideModifier": "Voile large",
+  "SailWideModifier-Comment": "Modificateur de puissance de sortie pour les voiles \"larges\" améliorées.",
+  "SailRotationModifier": "Rotation des voiles",
+  "SailRotationModifier-Comment": "Modificateur de vitesse de rotation des nouvelles voiles. Paramètre cosmétique côté client uniquement."
+}
