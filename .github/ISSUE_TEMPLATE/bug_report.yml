@@ -1,6 +1,7 @@
 name: Bugreport
 description: You can report a bug or issue here.
 labels: ["status: new"]
+assignees: ["SpearAndFang"]
 
 body:
   - type: input
