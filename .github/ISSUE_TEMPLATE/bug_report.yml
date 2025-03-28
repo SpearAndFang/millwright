@@ -5,11 +5,19 @@ assignees: ["SpearAndFang"]
 
 body:
   - type: input
-    id: shortdescription
+    id: gameversion
     attributes:
       label: Game Version
       description: What Game Version where you using?
-      placeholder: v1.20.7
+      placeholder: 1.20.7
+    validations:
+      required: false
+  - type: input
+    id: modversion
+    attributes:
+      label: Mod Version
+      description: What Version of this mod where you using?
+      placeholder: 1.1.8
     validations:
       required: false
   - type: dropdown
