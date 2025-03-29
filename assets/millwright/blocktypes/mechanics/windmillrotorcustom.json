@@ -1,4 +1,5 @@
 {
+  "enabled":  false,
   "code": "windmillrotorcustom",
   "class": "BlockWindmillRotorEnhanced",
   "entityClass": "Generic",
@@ -16,7 +17,7 @@
     },
     {
       "code": "material",
-      "states": [ "linen" ,"wool" ]
+      "states": [ "linen", "wool" ]
     },
     {
       "code": "color",

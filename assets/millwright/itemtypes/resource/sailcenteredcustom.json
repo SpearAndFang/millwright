@@ -1,4 +1,5 @@
 {
+  "enabled": false,
   "code": "sailcenteredcustom",
   "shape": { "base": "millwright:item/sailcentered" },
   "class": "ItemSailCustom",

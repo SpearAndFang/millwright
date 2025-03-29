@@ -1,6 +1,6 @@
 {
   "code": "windmillrotorud",
-  "enabled":  false,
+  "enabled": false,
   "class": "BlockWindmillRotorUD",
   "entityClass": "Generic",
   "entityBehaviors": [ { "name": "BEBehaviorWindmillRotorUD" } ],
@@ -53,12 +53,17 @@
   "lightAbsorption": 0,
   "maxStackSize": 4,
   "guiTransform": {
+    "rotation": {
+      "x": -46,
+      "y": -92,
+      "z": -127
+    },
     "origin": {
       "x": 0.45,
       "y": 0.5,
       "z": 0.5
     },
-    "scale": 1.74
+    "scale": 1.09
   },
   "tpHandTransform": {
     "translation": {

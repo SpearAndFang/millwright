@@ -1252,6 +1252,7 @@
 							"rotationZ": 90.0,
 							"faces": {
 								"north": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
+								"east": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 2.0 ], "windMode": [-1,-1,-1,-1], "windData": [-6,-6,-6,-6] },
 								"south": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"up": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"down": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] }
@@ -2721,6 +2722,7 @@
 							"rotationZ": 90.0,
 							"faces": {
 								"north": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
+								"east": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 2.0 ], "windMode": [-1,-1,-1,-1], "windData": [3,3,3,3] },
 								"south": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"up": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"down": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] }
@@ -4190,6 +4192,7 @@
 							"rotationZ": 90.0,
 							"faces": {
 								"north": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
+								"east": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 2.0 ], "windMode": [-1,-1,-1,-1], "windData": [3,3,3,3] },
 								"south": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"up": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
 								"down": { "texture": "#wood", "uv": [ 0.0, 0.0, 16.0, 2.0 ] }

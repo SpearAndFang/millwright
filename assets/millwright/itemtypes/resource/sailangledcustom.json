@@ -1,7 +1,8 @@
 {
+  "enabled": false,
   "code": "sailangledcustom",
   "shape": { "base": "millwright:item/sailangled" },
-  "class":  "ItemSailCustom",
+  "class": "ItemSailCustom",
   "variantgroups": [
     {
       "code": "material",

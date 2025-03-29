@@ -1,0 +1,32 @@
+{
+  // Russian localization file for 'Millwright'
+  // Mod Version: v1.1.8
+  // Translated By: GobStar
+  // Manual translation . 
+  "game:tabname-millwright": "Мельница",
+  "block-windmillrotor-three-*": "Ротор ветряной мельницы (три лопасти, усиленный)",
+  "block-windmillrotor-single-*": "Ротор ветряной мельницы (четыре лопасти, усиленный)",
+  "block-windmillrotor-six-*": "Ротор ветряной мельницы (шесть лопастей, усиленный)",
+  "block-windmillrotor-double-*": "Ротор ветряной мельницы (Восемь лопастей, усиленный)",
+  "item-sailcentered": "Парус (центр)",
+  "item-sailangled": "Парус (угловой)",
+  "item-sailwide": "Парус (широкий)",
+  "itemdesc-sail*": "Для этого паруса требуется усиленный ротор ветряной мельницы",
+  "block-brake-north": "Тормоз (усиленный)",
+  "block-woodenaxlepassthrough*": "Деревянная ось (для стены)",
+  "blockdesc-woodenaxlepassthrough*": "Установите две с двух сторон полного блока, чтобы передавать энергию, сохраняя целостность помещения",
+  "blockdesc-suitable-block-needed": "Вам нужен более подходящий блок, чтобы поддерживать эту ось",
+  
+  "AllowSailDeconstruction": "Разрешить демонтаж паруса",
+  "AllowSailDeconstruction-Comment": "Отключите, чтобы предотвратить восстановление льна из парусов на верстаке.",
+  "BrakeResistanceModifier": "Модификатор сопротивления тормоза",
+  "BrakeResistanceModifier-Comment": "Модификатор сопротивления тормоза для усиленных тормозов.",
+  "SailCenteredModifier": "Центрированный парус",
+  "SailCenteredModifier-Comment": "Модификатор выходной мощности для улучшенных центрированных парусов.",
+  "SailAngledModifier": "Парус под углом",
+  "SailAngledModifier-Comment": "Модификатор выходной мощности для улучшенных парусов под углом.",
+  "SailWideModifier": "Широкий парус",
+  "SailWideModifier-Comment": "Модификатор выходной мощности для улучшенных широких парусов.",
+  "SailRotationModifier": "Поворот паруса",
+  "SailRotationModifier-Comment": "Модификатор скорости вращения новых парусов. Настройка только для внешнего вида на клиенте."
+}

@@ -1,4 +1,5 @@
 {
+  "enabled": false,
   "code": "sailwidecustom",
   "shape": { "base": "millwright:item/sailwide" },
   "class": "ItemSailCustom",
