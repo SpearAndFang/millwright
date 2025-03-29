@@ -16,7 +16,7 @@ namespace Millwright.ModSystem
     using Millwright.ModConfig;
  
 
-    public class BEBehaviorWindmillRotorEnhanced : BEBehaviorMPRotor
+    public class BEBehaviorWindmillRotorEnhancedCustom : BEBehaviorMPRotor
     {
         private WeatherSystemBase weatherSystem;
         private double windSpeed;
@@ -45,7 +45,7 @@ namespace Millwright.ModSystem
 
         protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
 
-        public BEBehaviorWindmillRotorEnhanced(BlockEntity blockentity) : base(blockentity)
+        public BEBehaviorWindmillRotorEnhancedCustom(BlockEntity blockentity) : base(blockentity)
         { }
 
 
@@ -169,18 +169,7 @@ namespace Millwright.ModSystem
             else if (this.bladeType == "single" && this.SailLength >= 7)
             { return false; }
 
-
-            //for downwards compatibility
-            var sail = "";
-            if (this.SailType == null || this.SailType == "")
-            { sail = "sailcentered"; }
-            else
-            { sail = this.SailType; }
-
-
-
-
-            sail = slot.Itemstack.Collectible.Code.Path; //sailangled or sailangledcustom-wool-white
+            var sail = slot.Itemstack.Collectible.Code.Path; //sailangled or sailangledcustom-wool-white
 
             if (!sail.StartsWith("sail") || slot.Itemstack.Collectible.Code.Domain != "millwright")
             { return false; }
@@ -349,6 +338,13 @@ namespace Millwright.ModSystem
             sb.AppendLine(string.Format(Lang.Get("Wind speed: {0}%", (int)(100 * this.windSpeed))));
             sb.AppendLine(Lang.Get("Sails power output: {0} kN", (int)(this.SailLength * this.bladeModifier / 5f * 100f)));
             sb.AppendLine();
+
+            //debug
+            sb.AppendLine("Sail Length:" + this.SailLength);
+            sb.AppendLine("Sail Type:" + this.SailType);
+            sb.AppendLine();
+
+
             sb.AppendLine("<font color=\"#edca98\"><i>Millwright</i></font>");
         }
     }

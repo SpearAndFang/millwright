@@ -3,6 +3,7 @@
   "shape": { "base": "millwright:item/sailwide" },
   "textures": {
     "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" },
     "cloth": { "base": "game:block/cloth/linen/normal1" }
   },
   "creativeinventory": {

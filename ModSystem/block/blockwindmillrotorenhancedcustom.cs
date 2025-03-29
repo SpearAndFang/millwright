@@ -1,12 +1,14 @@
 namespace Millwright.ModSystem
 {
+    using System.Security.Cryptography.X509Certificates;
     //using System.Diagnostics;
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
+    using Vintagestory.API.Config;
     using Vintagestory.API.MathTools;
     using Vintagestory.GameContent.Mechanics;
 
-    public class BlockWindmillRotorEnhanced : BlockMPBase //, IMPPowered
+    public class BlockWindmillRotorEnhancedCustom : BlockMPBase //, IMPPowered
     {
         private BlockFacing powerOutFacing;
         private string bladeType;
@@ -36,102 +38,50 @@ namespace Millwright.ModSystem
             return face == this.powerOutFacing;
         }
 
+        
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
         {
-            if (!this.CanPlaceBlock(world, byPlayer, blockSel, ref failureCode))
-            {
-                return false;
-            }
             foreach (var face in BlockFacing.HORIZONTALS)
             {
-                var pos = blockSel.Position.AddCopy(face);
+                var pos = blockSel.Position;  //.AddCopy(face);
                 if (world.BlockAccessor.GetBlock(pos) is IMechanicalPowerBlock block)
                 {
                     if (block.HasMechPowerConnectorAt(world, pos, face.Opposite))
                     {
-                        //We can use a different approach to this
-
-                        //Prevent rotor back-to-back placement
-                        // if (block is IMPPowered)
-                        //    return false;
-                        if (block is BlockWindmillRotor || block is BlockWindmillRotorEnhanced)
-                        { return false; }
-
-                        var playerSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-                        if (!playerSlot.Empty)
-                        {
-                            var playerStack = playerSlot.Itemstack;
-                            if (playerStack.Collectible.FirstCodePart().StartsWith("sail") && playerStack.Collectible.FirstCodePart().EndsWith("custom"))
-                            {
-                                Block toPlaceBlock;
-                                if (this.FirstCodePart() == "windmillrotorcustom")
-                                {
-                                    toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + this.FirstCodePart(2) + "-" + this.FirstCodePart(3) + "-" + face.Opposite.Code));
-                                }
-                                else
-                                {
-                                    toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + face.Opposite.Code));
-                                }
-                                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
-                                block.DidConnectAt(world, pos, face.Opposite);
-                                this.WasPlaced(world, blockSel.Position, face);
-
-                                return true;
-                            }
-                        }
-                    }
-                }
-            }
-
-            var ok = base.TryPlaceBlock(world, byPlayer, itemstack, blockSel, ref failureCode);
-            if (ok)
-            {
-                this.WasPlaced(world, blockSel.Position, null);
-            }
-            return ok;
-        }
-
-        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
-        {
-
-            var playerSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (!playerSlot.Empty)
-            {
-                var playerStack = playerSlot.Itemstack;
-                if (playerStack.Collectible.FirstCodePart().StartsWith("sail") && playerStack.Collectible.FirstCodePart().EndsWith("custom"))
-                {
-                    if (this.FirstCodePart() == "windmillrotorcustom")
-                    {
-                        var beb = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
-                        if (beb != null)
-                        {
-                            return beb.OnInteract(byPlayer);
-                        }
-
-
-                    }
-                    else if (this.FirstCodePart() == "windmillrotor")
-                    {
-                        return false;// base.OnBlockInteractStart(world, byPlayer, blockSel);
-                    }
-                }
-                else
-                {
-                    var beb = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
-                    if (beb != null)
-                    {
-                        return beb.OnInteract(byPlayer);
+                        block.DidConnectAt(world, pos, face.Opposite);
+                        this.WasPlaced(world, blockSel.Position, face);
+                        return true;
                     }
                 }
             }
  
+            this.WasPlaced(world, blockSel.Position, null);
+            return true;
+        }
 
-            var be = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
+
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            /*var playerSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
+            if (!playerSlot.Empty)
+            {
+                var playerStack = playerSlot.Itemstack;
+                if (playerStack.Collectible.FirstCodePart().StartsWith("sail") && playerStack.Collectible.FirstCodePart().EndsWith("custom"))
+                { 
+                    if (this.FirstCodePart() == "windmillrotor")
+                    {
+                        return base.OnBlockInteractStart(world, byPlayer, blockSel);
+                    }
+                }
+                else
+                { */
+            BEBehaviorWindmillRotorEnhancedCustom be = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhancedCustom>();
             if (be != null)
             {
                 return be.OnInteract(byPlayer);
             }
-
+             //   }
+           // }
             return base.OnBlockInteractStart(world, byPlayer, blockSel);
         }
 

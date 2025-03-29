@@ -1,10 +1,25 @@
 {
-  "code": "sailangled",
+  "code": "sailangledcustom",
   "shape": { "base": "millwright:item/sailangled" },
+  "class":  "ItemSailCustom",
+  "variantgroups": [
+    {
+      "code": "material",
+      "states": [ "wool" ]
+    },
+    {
+      "code": "color",
+      "states": [ "white", "brown", "black" ]
+    }
+  ],
   "textures": {
     "wood": { "base": "game:block/wood/planks/generic" },
-    "iron": { "base": "game:block/metal/plate/iron" },
-    "cloth": { "base": "game:block/cloth/linen/normal1" }
+    "iron": { "base": "game:block/metal/plate/iron" }
+  },
+  "texturesByType": {
+    "*-wool-*": {
+      "cloth": { "base": "game:block/cloth/wool/{color}1" }
+    }
   },
   "creativeinventory": {
     "general": [ "*" ],

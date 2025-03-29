@@ -10,6 +10,9 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockWindmillRotorEnhanced", typeof(BlockWindmillRotorEnhanced));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorEnhanced", typeof(BEBehaviorWindmillRotorEnhanced));
 
+            api.RegisterBlockClass("BlockWindmillRotorUD", typeof(BlockWindmillRotorUD));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorUD", typeof(BEBehaviorWindmillRotorUD));
+
             api.RegisterBlockClass("BlockBrakeEnhanced", typeof(BlockBrakeEnhanced));
             api.RegisterBlockEntityClass("BEBrakeEnhanced", typeof(BEBrakeEnhanced));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorBrakeEnhanced", typeof(BEBehaviorBrakeEnhanced));
@@ -18,6 +21,8 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockAxlePassthroughfull", typeof(BlockAxlePassthroughFull));
             api.RegisterBlockEntityClass("BEAxlePassThrough", typeof(BEAxlePassThrough));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorAxlePassthrough", typeof(BEBehaviorAxlePassthrough));
+
+            api.RegisterItemClass("ItemSailCustom", typeof(ItemSailCustom));
         }
 
 

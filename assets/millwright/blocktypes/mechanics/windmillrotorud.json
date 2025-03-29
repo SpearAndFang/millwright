@@ -1,0 +1,95 @@
+{
+  "code": "windmillrotorud",
+  "enabled":  false,
+  "class": "BlockWindmillRotorUD",
+  "entityClass": "Generic",
+  "entityBehaviors": [ { "name": "BEBehaviorWindmillRotorUD" } ],
+  "attributes": {
+    "handbook": {
+      "groupBy": [ "windmillrotorud-{type}-*" ]
+    }
+  },
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "three" ]
+    },
+    {
+      "code": "side",
+      "states": [ "up" ]
+    }
+  ],
+  "creativeinventory": {
+    "general": [ "*-up" ],
+    "mechanics": [ "*-up" ],
+    "millwright": [ "*-up" ]
+  },
+  "shapebytype": {
+    "*": {
+      "base": "millwright:block/wood/mechanics/{type}/windmillrotorud",
+      "rotateZ": 90
+    }
+  },
+  "blockmaterial": "Wood",
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" },
+    "cloth": { "base": "game:block/cloth/linen/normal1" }
+  },
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": true,
+  "drops": [
+    {
+      "type": "block",
+      "code": "millwright:windmillrotorud-{type}-up"
+    }
+  ],
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 4,
+  "guiTransform": {
+    "origin": {
+      "x": 0.45,
+      "y": 0.5,
+      "z": 0.5
+    },
+    "scale": 1.74
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.2,
+      "y": -1,
+      "z": -1
+    },
+    "scale": 0.5
+  },
+  "groundTransform": {
+    "translation": {
+      "x": -0.08,
+      "y": 0.04,
+      "z": 0.2
+    },
+    "rotation": {
+      "x": -37,
+      "y": -44,
+      "z": 21
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.5,
+      "z": 0.1
+    },
+    "scale": 2.9
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}
