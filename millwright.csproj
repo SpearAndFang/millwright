@@ -37,11 +37,7 @@
   <Content Include="assets\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-  <None Remove="assets\millwright\blocktypes\mechanics\windmillrotorcustom.json" />
   <None Remove="assets\millwright\blocktypes\mechanics\windmillrotorud.json" />
-  <None Remove="assets\millwright\itemtypes\resource\sailangledcustom.json" />
-  <None Remove="assets\millwright\itemtypes\resource\sailcenteredcustom.json" />
-  <None Remove="assets\millwright\itemtypes\resource\sailwidecustom.json" />
   <Content Include="modinfo.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
@@ -49,12 +45,6 @@
 
 <ItemGroup>
   <Content Update="assets\millwright\blocktypes\mechanics\windmillrotorud.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
-
-<ItemGroup>
-  <Content Update="assets\millwright\blocktypes\mechanics\windmillrotorcustom.json">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
 </ItemGroup>

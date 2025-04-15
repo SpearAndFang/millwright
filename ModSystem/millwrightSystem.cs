@@ -22,9 +22,6 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockAxlePassthroughfull", typeof(BlockAxlePassthroughFull));
             api.RegisterBlockEntityClass("BEAxlePassThrough", typeof(BEAxlePassThrough));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorAxlePassthrough", typeof(BEBehaviorAxlePassthrough));
-
-            // colored sails attempt 1
-            //api.RegisterItemClass("ItemSailCustom", typeof(ItemSailCustom));
         }
 
 

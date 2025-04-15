@@ -11,7 +11,7 @@ namespace Millwright.ModSystem
         private BlockFacing powerOutFacing;
         private string bladeType;
         private int bladeCount;
-        public override void OnLoaded(ICoreAPI api) 
+        public override void OnLoaded(ICoreAPI api)
         {
             this.powerOutFacing = BlockFacing.FromCode(this.Variant["side"]).Opposite;
 
@@ -57,28 +57,13 @@ namespace Millwright.ModSystem
                         if (block is BlockWindmillRotor || block is BlockWindmillRotorEnhanced)
                         { return false; }
 
-                        var playerSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-                        if (!playerSlot.Empty)
-                        {
-                            var playerStack = playerSlot.Itemstack;
-                            if (playerStack.Collectible.FirstCodePart().StartsWith("sail") && playerStack.Collectible.FirstCodePart().EndsWith("custom"))
-                            {
-                                Block toPlaceBlock;
-                                if (this.FirstCodePart() == "windmillrotorcustom")
-                                {
-                                    toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + this.FirstCodePart(2) + "-" + this.FirstCodePart(3) + "-" + face.Opposite.Code));
-                                }
-                                else
-                                {
-                                    toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + face.Opposite.Code));
-                                }
-                                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
-                                block.DidConnectAt(world, pos, face.Opposite);
-                                this.WasPlaced(world, blockSel.Position, face);
+                        var toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + face.Opposite.Code));
+                        world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
 
-                                return true;
-                            }
-                        }
+                        block.DidConnectAt(world, pos, face.Opposite);
+                        this.WasPlaced(world, blockSel.Position, face);
+
+                        return true;
                     }
                 }
             }
@@ -93,39 +78,6 @@ namespace Millwright.ModSystem
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-
-            var playerSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (!playerSlot.Empty)
-            {
-                var playerStack = playerSlot.Itemstack;
-                if (playerStack.Collectible.FirstCodePart().StartsWith("sail") && playerStack.Collectible.FirstCodePart().EndsWith("custom"))
-                {
-                    if (this.FirstCodePart() == "windmillrotorcustom")
-                    {
-                        var beb = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
-                        if (beb != null)
-                        {
-                            return beb.OnInteract(byPlayer);
-                        }
-
-
-                    }
-                    else if (this.FirstCodePart() == "windmillrotor")
-                    {
-                        return false;// base.OnBlockInteractStart(world, byPlayer, blockSel);
-                    }
-                }
-                else
-                {
-                    var beb = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
-                    if (beb != null)
-                    {
-                        return beb.OnInteract(byPlayer);
-                    }
-                }
-            }
- 
-
             var be = world.BlockAccessor.GetBlockEntity(blockSel.Position)?.GetBehavior<BEBehaviorWindmillRotorEnhanced>();
             if (be != null)
             {
@@ -176,7 +128,8 @@ namespace Millwright.ModSystem
                             }
                         }
                  };
-            };
+            }
+            ;
             return new WorldInteraction[]
             {
                 new WorldInteraction()

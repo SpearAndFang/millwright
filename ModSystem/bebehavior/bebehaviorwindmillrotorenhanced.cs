@@ -1,6 +1,3 @@
-using Vintagestory.API.Client;
-using Vintagestory.API.Common;
-
 namespace Millwright.ModSystem
 {
     using System;
@@ -14,7 +11,6 @@ namespace Millwright.ModSystem
     using Vintagestory.GameContent;
     using Vintagestory.GameContent.Mechanics;
     using Millwright.ModConfig;
- 
 
     public class BEBehaviorWindmillRotorEnhanced : BEBehaviorMPRotor
     {
@@ -106,18 +102,8 @@ namespace Millwright.ModSystem
                         { sail = this.SailType; }
 
                         var assetLoc = new AssetLocation("millwright:" + sail);
-                        var stacks = new ItemStack(this.Api.World.GetItem(assetLoc), this.bladeCount * this.SailLength);
+                        var stacks = new ItemStack(this.Api.World.GetItem(assetLoc), this.bladeCount);
                         this.Api.World.SpawnItemEntity(stacks, this.Blockentity.Pos.ToVec3d().Add(0.5, 0.5, 0.5));
-
-                        //if the rotor is custom, convert it back to normal
-                        if (this.Block.FirstCodePart() == "windmillrotorcustom")
-                        {
-                            string newRotorAsset = "millwright:windmillrotor-" + this.Block.FirstCodePart(1) + "-" + this.Block.LastCodePart();
-                            var newblock = Api.World.BlockAccessor.GetBlock(new AssetLocation(newRotorAsset));
-                            Api.World.BlockAccessor.SetBlock(newblock.BlockId, this.Position);
-                            return;
-                        }
-   
                     }
                     this.SailLength = 0;
                     this.SailType = "";
@@ -180,12 +166,11 @@ namespace Millwright.ModSystem
 
 
 
-            sail = slot.Itemstack.Collectible.Code.Path; //sailangled or sailangledcustom-wool-white
-
+            sail = slot.Itemstack.Collectible.Code.Path;
             if (!sail.StartsWith("sail") || slot.Itemstack.Collectible.Code.Domain != "millwright")
             { return false; }
 
-            if (this.SailLength > 0 && !sail.Contains(this.SailType))
+            if (this.SailLength > 0 && this.SailType != sail)
             { return false; }
 
             var assetLoc = new AssetLocation("millwright:" + sail);
@@ -212,21 +197,7 @@ namespace Millwright.ModSystem
                 slot.MarkDirty();
             }
             this.SailLength++;
-
             this.SailType = sail;
-
-            if ((sailStack.Collectible.FirstCodePart() == "sailangledcustom") && (this.Block.FirstCodePart() == "windmillrotor"))
-            {
-                //if the sail is custom (i.e. sailangledcustom-wool-white) we need to swap out the rotor
-                // windmillrotorcustom-
-                //  type [ "single", "double", "three", "six" ]
-                //  material i.e. wool
-
-                //  color i.e. white black brown
-                // direction i.e. north south east west
-
-
-            }
 
             this.updateShape(this.Api.World);
 
@@ -236,7 +207,7 @@ namespace Millwright.ModSystem
 
         private bool Obstructed(int len)
         {
-            var tmpPos = new BlockPos(0,0,0,0);
+            var tmpPos = new BlockPos(0, 0, 0, 0);
 
             for (var dxz = -len; dxz <= len; dxz++)
             {
@@ -269,7 +240,6 @@ namespace Millwright.ModSystem
             return false;
         }
 
-   
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
             this.SailLength = tree.GetInt("sailLength");
@@ -300,9 +270,6 @@ namespace Millwright.ModSystem
             }
         }
 
-
-       
-
         protected override void updateShape(IWorldAccessor worldForResolve)
         {
             if (worldForResolve.Side != EnumAppSide.Client || this.Block == null)
@@ -327,13 +294,6 @@ namespace Millwright.ModSystem
                 else
                 { sail = this.SailType; }
 
-                if (sail.Contains("custom-"))
-                {
-                    //ugh this about to get fucky
-                    sail = sail.Split('-')[0];
-                    sail = sail.Replace("custom", "");
-                }
-    
                 this.Shape = new CompositeShape()
                 {
                     Base = new AssetLocation("millwright:block/wood/mechanics/" + this.bladeType + "/" + sail + "/windmill-" + this.SailLength + "blade"),
