@@ -1,0 +1,31 @@
+{
+  "_comentarios-1": "Millwright v1.2.0 || Enlace del Mod: https://mods.vintagestory.at/millwright ",
+  "_comentarios-2": "Traducido por C4BR3R4 || Última Modificación: 29/04/2025 || Publicación: https://c4br3r4.es/index.php?topic=1345.0 ",
+
+  "game:tabname-millwright": "Molinero",
+  "block-windmillrotor-three-*": "Rotor Reforzado de Molino de Viento (3 Aspas)",
+  "block-windmillrotor-single-*": "Rotor Reforzado de Molino de Viento (4 Aspas)",
+  "block-windmillrotor-six-*": "Rotor Reforzado de Molino de Viento (6 Aspas)",
+  "block-windmillrotor-double-*": "Rotor Reforzado de Molino de Viento (8 Aspas)",
+  "item-sailcentered": "Aspa Centrada",
+  "item-sailangled": "Aspa Angular",
+  "item-sailwide": "Aspa Ancha",
+  "itemdesc-sail*": "Componente de Molino de Viento. Necesita un Rotor Reforzado de Molino de Viento.",
+  "block-brake-north": "Freno Reforzado",
+  "block-woodenaxlepassthrough*": "Casquillo con Eje de Madera",
+  "blockdesc-woodenaxlepassthrough*": "<font opacity='0.6'><i>Coloca uno a cada lado de un bloque completo, para transferir la potencia, manteniendo la integridad de la estancia.</i></font>\n",
+  "blockdesc-suitable-block-needed": "Necesita un bloque más adecuado para soportar este eje.",
+  
+  "AllowSailDeconstruction": "Permitir Deshacer las Aspas",
+  "AllowSailDeconstruction-Comment": "Desactivar para evitar recuperar el Lino de las Aspas usando el Inventario de Elaboración.",
+  "BrakeResistanceModifier": "Resistencia de Frenado",
+  "BrakeResistanceModifier-Comment": "Modificador de Resistencia de Frenado de los Frenos Reforzados.",
+  "SailCenteredModifier": "Aspa Centrada",
+  "SailCenteredModifier-Comment": "Modificador de Potencia de salida de las Aspas «Centradas» mejoradas.",
+  "SailAngledModifier": "Aspa Angulada",
+  "SailAngledModifier-Comment": "Modificador de Potencia de salida de las Aspas «Anguladas» mejoradas.",
+  "SailWideModifier": "Aspa Ancha",
+  "SailWideModifier-Comment": "Modificador de Potencia de salida de las Aspas «Anchas» mejoradas.",
+  "SailRotationModifier": "Rotación de las Aspas",
+  "SailRotationModifier-Comment": "Modificador de la velocidad de rotación de las nuevas Aspas. Solamente es un ajuste visual del lado del cliente."
+}
