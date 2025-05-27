@@ -10,7 +10,7 @@
 	"itemdesc-sail*": "Componente de moinho. Requer um rotor de moinho reforçado",
 	"block-brake-north": "Freio (reforçado)",
 	"block-woodenaxlepassthrough*": "Conduíte Eixo de madeira",
-	"blockdesc-woodenaxlepassthrough*": "Coloque em lados opostos de um bloco inteiro para transferir força enquanto mantém a integridade da sala",
+	"blockdesc-woodenaxlepassthrough*": "Coloque em lados opostos de um bloco inteiro para transferir força enquanto mantém a integridade da sala. Deprecated. Please use the Improved wooden axle instead.",
 	"blockdesc-suitable-block-needed": "Você precisa de um bloco mais apropriado para suportar este eixo",
 
 	"AllowSailDeconstruction": "Allow Sail Deconstruction",
@@ -24,5 +24,14 @@
 	"SailWideModifier": "Sail Wide",
 	"SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
 	"SailRotationModifier": "Sail Rotation",
-	"SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+	"SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only.",
+
+	"block-improvedaxlepassthrough*": "Improved Wooden axle (passthrough)",
+	"blockdesc-improvedaxlepassthrough*": "Fits inside a full block to transfer power while maintaining room integrity",
+	"axle-insideof": "inside of",
+
+	"block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
+	"blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
+	"item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
 }
+

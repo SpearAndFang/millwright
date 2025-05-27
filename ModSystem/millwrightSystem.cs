@@ -10,9 +10,9 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockWindmillRotorEnhanced", typeof(BlockWindmillRotorEnhanced));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorEnhanced", typeof(BEBehaviorWindmillRotorEnhanced));
 
-            //horizontal windmill demo only
-            //api.RegisterBlockClass("BlockWindmillRotorUD", typeof(BlockWindmillRotorUD));
-            //api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorUD", typeof(BEBehaviorWindmillRotorUD));
+            //horizontal windmill
+            api.RegisterBlockClass("BlockWindmillRotorUD", typeof(BlockWindmillRotorUD));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorWindmillRotorUD", typeof(BEBehaviorWindmillRotorUD));
 
             api.RegisterBlockClass("BlockBrakeEnhanced", typeof(BlockBrakeEnhanced));
             api.RegisterBlockEntityClass("BEBrakeEnhanced", typeof(BEBrakeEnhanced));
@@ -22,6 +22,11 @@ namespace Millwright.ModSystem
             api.RegisterBlockClass("BlockAxlePassthroughfull", typeof(BlockAxlePassthroughFull));
             api.RegisterBlockEntityClass("BEAxlePassThrough", typeof(BEAxlePassThrough));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorAxlePassthrough", typeof(BEBehaviorAxlePassthrough));
+
+            api.RegisterBlockClass("ImprovedBlockAxlePassthrough", typeof(ImprovedBlockAxlePassthrough));
+            api.RegisterBlockClass("ImprovedBlockAxlePassthroughfull", typeof(ImprovedBlockAxlePassthroughFull));
+            api.RegisterBlockEntityClass("ImprovedBEAxlePassThrough", typeof(ImprovedBEAxlePassThrough));
+            api.RegisterBlockEntityBehaviorClass("BEBehaviorImprovedAxlePassthrough", typeof(BEBehaviorImprovedAxlePassthrough));
         }
 
 

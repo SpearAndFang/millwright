@@ -37,7 +37,15 @@ namespace Millwright.ModSystem
 
         protected override float Resistance => 0.003f;
         protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4);
+
         protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier);
+
+
+        //protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier / (this.bladeCount / 2.01), this.windSpeed * this.bladeModifier / (this.bladeCount / 2.01));
+        // hmmm
+        // while this seems to fix the overperformance issue it seems terribly underpowered with a fully loaded 8 blade 4 windmill setup
+        // almost like torquefactor also needs to be modified
+        
 
         protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
 
@@ -58,20 +66,23 @@ namespace Millwright.ModSystem
             if (this.bladeType == "double")
             {
                 this.bladeCount = 8;
-                this.bladeModifier *= 2f;
+                this.bladeModifier *= 2f; // default 4
             }
             else if (this.bladeType == "three")
             {
                 this.bladeCount = 3;
-                this.bladeModifier *= 0.75f;
+                this.bladeModifier *= 0.75f; // default 1.5
             }
             else if (this.bladeType == "six")
             {
                 this.bladeCount = 6;
-                this.bladeModifier *= 1.5f;
+                this.bladeModifier *= 1.5f; // default 3
             }
             else //single
-            { this.bladeCount = 4; }
+            { 
+                this.bladeCount = 4;
+                // default 2
+            }
 
             base.Initialize(api, properties);
             this.sound = new AssetLocation("game:sounds/effect/swoosh");

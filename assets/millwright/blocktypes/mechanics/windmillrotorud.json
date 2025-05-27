@@ -1,6 +1,5 @@
 {
   "code": "windmillrotorud",
-  "enabled": false,
   "class": "BlockWindmillRotorUD",
   "entityClass": "Generic",
   "entityBehaviors": [ { "name": "BEBehaviorWindmillRotorUD" } ],
@@ -26,7 +25,7 @@
   },
   "shapebytype": {
     "*": {
-      "base": "millwright:block/wood/mechanics/{type}/windmillrotorud",
+      "base": "millwright:block/wood/mechanics/ud/{type}/windmillrotorud",
       "rotateZ": 90
     }
   },
@@ -53,17 +52,21 @@
   "lightAbsorption": 0,
   "maxStackSize": 4,
   "guiTransform": {
+    "translation": {
+      "x": 0,
+      "y": -3,
+      "z": 0
+    },
     "rotation": {
-      "x": -46,
-      "y": -92,
-      "z": -127
+      "x": 0,
+      "y": -22,
+      "z": -90
     },
-    "origin": {
-      "x": 0.45,
-      "y": 0.5,
-      "z": 0.5
-    },
-    "scale": 1.09
+    "scaleXyz": {
+      "x": -1.5599,
+      "y": 1.5599,
+      "z": 1.5599
+    }
   },
   "tpHandTransform": {
     "translation": {

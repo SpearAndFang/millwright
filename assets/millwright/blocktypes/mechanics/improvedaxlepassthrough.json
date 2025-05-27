@@ -1,0 +1,120 @@
+{
+  "code": "improvedaxlepassthrough",
+  "class": "ImprovedBlockAxlePassthrough",
+  "entityClass": "ImprovedBEAxlePassThrough",
+  "entityBehaviors": [ { "name": "BEBehaviorImprovedAxlePassthrough" } ],
+
+  "behaviors": [
+    {
+      "name": "Pillar",
+      "properties": { "invertedPlacement": true }
+    }
+  ],
+  "attributes": {
+    "handbook": { "exclude": true }
+  },
+  "creativeinventory": {
+  },
+  "variantgroups": [
+    {
+      "code": "rotation",
+      "states": [ "ud", "ns", "we" ]
+    }
+  ],
+  "shapeByType": {
+    "*-ud": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough-improved",
+      "rotateZ": 90
+    },
+    "*-ns": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough-improved",
+      "rotateY": 90
+    },
+    "*-we": {
+      "base": "millwright:block/wood/mechanics/axle-passthrough-improved",
+      "rotateY": 180
+    }
+  },
+  "blockmaterial": "Wood",
+  "materialDensity": 450,
+  "textures": {
+    "wood": { "base": "game:block/wood/planks/generic" },
+    "iron": { "base": "game:block/metal/plate/iron" }
+  },
+  "faceCullMode": "MergeMaterial",
+  "sidesolid": {
+    "all": false
+  },
+  "sideopaque": {
+    "all": false
+  },
+  "rainPermeable": false,
+  "resistance": 3.5,
+  "lightAbsorption": 0,
+  "maxStackSize": 16,
+  "drops": [
+   // {
+   //   "type": "block",
+   //   "code": "millwright:improvedaxlepassthroughfull",
+   //   "quantity": { "avg": 1 }
+   // }
+  ],
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": -90,
+      "y": 0,
+      "z": 0
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.45,
+      "z": 0.38
+    },
+    "scale": 2.7
+  },
+  "guiTransform": {
+    "rotation": {
+      "x": -55,
+      "y": -10,
+      "z": -43
+    },
+    "scale": 1.88
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -1.5,
+      "y": -0.4,
+      "z": -0.9
+    },
+    "rotation": {
+      "x": 0,
+      "y": 0,
+      "z": 90
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 0.25,
+      "z": 0.5
+    },
+    "scale": 0.55
+  },
+  "collisionSelectionBox": {
+      "x1": 0,
+      "y1": 0,
+      "z1": 0,
+      "x2": 1,
+      "y2": 1,
+      "z2": 1
+  },
+  "sounds": {
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    "place": "game:block/planks",
+    "walk": "game:walk/wood"
+  }
+}

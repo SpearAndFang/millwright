@@ -10,9 +10,9 @@
   "itemdesc-sail*": "Windmill component. Requires a reinforced windmill rotor",
   "block-brake-north": "Brake (reinforced)",
   "block-woodenaxlepassthrough*": "Wooden axle (passthrough)",
-  "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity",
+  "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity. Deprecated. Please use the Improved wooden axle instead.",
   "blockdesc-suitable-block-needed": "you need a more suitable block to support this axle",
-  
+
   "AllowSailDeconstruction": "Allow Sail Deconstruction",
   "AllowSailDeconstruction-Comment": "Disable to prevent recovering linen from sails in the crafting grid.",
   "BrakeResistanceModifier": "Brake Resistance",
@@ -24,5 +24,13 @@
   "SailWideModifier": "Sail Wide",
   "SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
   "SailRotationModifier": "Sail Rotation",
-  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only.",
+
+  "block-improvedaxlepassthrough*": "Improved Wooden axle (passthrough)",
+  "blockdesc-improvedaxlepassthrough*": "Fits inside a full block to transfer power while maintaining room integrity",
+  "axle-insideof": "inside of",
+
+  "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
+  "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
 }

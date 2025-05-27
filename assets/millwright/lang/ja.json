@@ -15,7 +15,7 @@
   "itemdesc-sail*": "風車の部品。強化済の風車のローターが必要",
   "block-brake-north": "ブレーキ(補強済)",
   "block-woodenaxlepassthrough*": "木の軸(パススルー)",
-  "blockdesc-woodenaxlepassthrough*": "フルブロックの両側に1つずつ配置することで、部屋の整合性を保ちながら動力を伝達出来る",
+  "blockdesc-woodenaxlepassthrough*": "フルブロックの両側に1つずつ配置することで、部屋の整合性を保ちながら動力を伝達出来る. Deprecated. Please use the Improved wooden axle instead.",
   "blockdesc-suitable-block-needed": "この軸を支えるには、もっと適切なブロックが必要",
 
   "AllowSailDeconstruction": "Allow Sail Deconstruction",
@@ -29,5 +29,13 @@
   "SailWideModifier": "Sail Wide",
   "SailWideModifier-Comment": "Output power modifier for the improved \"wide\" sails.",
   "SailRotationModifier": "Sail Rotation",
-  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only."
+  "SailRotationModifier-Comment": "Rotation speed modifier of the new sails. Cosmetic client side setting only.",
+
+  "block-improvedaxlepassthrough*": "Improved Wooden axle (passthrough)",
+  "blockdesc-improvedaxlepassthrough*": "Fits inside a full block to transfer power while maintaining room integrity",
+  "axle-insideof": "inside of",
+
+  "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
+  "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
 }

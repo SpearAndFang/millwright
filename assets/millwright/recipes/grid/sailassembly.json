@@ -1,0 +1,68 @@
+[
+  {
+    "ingredientPattern": "HC_,SRT",
+    "enabled": true,
+    "shapeless": false,
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "S": {
+        "type": "item",
+        "code": "millwright:sailwide",
+        "quantity": 3
+      },
+      "R": {
+        "type": "block",
+        "code": "game:woodenaxle-ud"
+      },
+      "T": {
+        "type": "item",
+        "code": "game:stick",
+        "quantity": 3
+      }
+    },
+    "width": 3,
+    "height": 2,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailassembly-three-sailwide",
+      "quantity": 1
+    }
+  },
+  {
+    "ingredientPattern": "HC,R_",
+    "enabled": true,
+    "shapeless": false,
+    "ingredients": {
+      "H": {
+        "type": "item",
+        "code": "game:hammer-*",
+        "isTool": true
+      },
+      "C": {
+        "type": "item",
+        "code": "game:chisel-*",
+        "isTool": true
+      },
+      "R": {
+        "type": "item",
+        "code": "millwright:sailassembly-three-sailwide"
+      }
+    },
+    "width": 2,
+    "height": 2,
+    "output": {
+      "type": "item",
+      "code": "millwright:sailwide",
+      "quantity": 3
+    }
+  }
+]

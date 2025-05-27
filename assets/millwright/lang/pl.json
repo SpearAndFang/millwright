@@ -10,9 +10,9 @@
   "itemdesc-sail*": "Element wiatraka. Wymaga wzmocnionego wirnika",
   "block-brake-north": "Hamulec (wzmocniony)",
   "block-woodenaxlepassthrough*": "Drewniana oś (przelotowa)",
-  "blockdesc-woodenaxlepassthrough*": "Umieść po jednej z każdej strony pełnego bloku, aby przenieść moc, zachowując integralność pomieszczenia",
+  "blockdesc-woodenaxlepassthrough*": "Umieść po jednej z każdej strony pełnego bloku, aby przenieść moc, zachowując integralność pomieszczenia. Deprecated. Please use the Improved wooden axle instead.",
   "blockdesc-suitable-block-needed": "potrzebujesz bardziej odpowiedniego bloku, aby podeprzeć tę oś",
-  
+
   "AllowSailDeconstruction": "Zezwól na demontaż żagli",
   "AllowSailDeconstruction-Comment": "Wyłącz, aby uniemożliwić odzyskiwanie płótna z żagli w siatce rzemieślniczej.",
   "BrakeResistanceModifier": "Modyfikator oporu hamulca",
@@ -24,5 +24,13 @@
   "SailWideModifier": "Żagiel szeroki",
   "SailWideModifier-Comment": "Modyfikator mocy wyjściowej dla ulepszonych żagli 'szerokich'.",
   "SailRotationModifier": "Obrót żagla",
-  "SailRotationModifier-Comment": "Modyfikator prędkości obrotowej nowych żagli. Ustawienie tylko kosmetyczne po stronie klienta."
+  "SailRotationModifier-Comment": "Modyfikator prędkości obrotowej nowych żagli. Ustawienie tylko kosmetyczne po stronie klienta.",
+
+  "block-improvedaxlepassthrough*": "Improved Wooden axle (passthrough)",
+  "blockdesc-improvedaxlepassthrough*": "Fits inside a full block to transfer power while maintaining room integrity",
+  "axle-insideof": "inside of",
+
+  "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
+  "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
 }
