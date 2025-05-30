@@ -1,7 +1,8 @@
 namespace Millwright.ModSystem
 
 {
-    using System.Collections.Generic; 
+    using System.Collections.Generic;
+    using System.Diagnostics;
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
     using Vintagestory.API.MathTools;
@@ -47,13 +48,18 @@ namespace Millwright.ModSystem
                 {
                     if (block.HasMechPowerConnectorAt(world, pos, face.Opposite))
                     {
-                        var toPlaceBlock = world.GetBlock(new AssetLocation("millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-" + face.Opposite.Code));
-                        world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
+                        var rotorAsset = "millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-up";
+                        Debug.WriteLine(rotorAsset);
+                        var toPlaceBlock = world.GetBlock(rotorAsset);
 
-                        block.DidConnectAt(world, pos, face.Opposite);
-                        this.WasPlaced(world, blockSel.Position, face);
-
-                        return true;
+                        if (toPlaceBlock != null)
+                        {
+                            world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
+                            block.DidConnectAt(world, pos, face.Opposite);
+                            this.WasPlaced(world, blockSel.Position, face);
+                            return true;
+                        }
+                        return false;
                     }
                 }
             }

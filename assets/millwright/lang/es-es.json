@@ -15,7 +15,7 @@
   "block-woodenaxlepassthrough*": "Casquillo con Eje de Madera",
   "blockdesc-woodenaxlepassthrough*": "<font opacity='0.6'><i>Coloca uno a cada lado de un bloque completo, para transferir la potencia, manteniendo la integridad de la estancia.</i></font>\n",
   "blockdesc-suitable-block-needed": "Necesita un bloque más adecuado para soportar este eje.",
-  
+
   "AllowSailDeconstruction": "Permitir Deshacer las Aspas",
   "AllowSailDeconstruction-Comment": "Desactivar para evitar recuperar el Lino de las Aspas usando el Inventario de Elaboración.",
   "BrakeResistanceModifier": "Resistencia de Frenado",
@@ -27,5 +27,13 @@
   "SailWideModifier": "Aspa Ancha",
   "SailWideModifier-Comment": "Modificador de Potencia de salida de las Aspas «Anchas» mejoradas.",
   "SailRotationModifier": "Rotación de las Aspas",
-  "SailRotationModifier-Comment": "Modificador de la velocidad de rotación de las nuevas Aspas. Solamente es un ajuste visual del lado del cliente."
+  "SailRotationModifier-Comment": "Modificador de la velocidad de rotación de las nuevas Aspas. Solamente es un ajuste visual del lado del cliente.",
+
+  "block-improvedaxlepassthrough*": "Improved Wooden axle (passthrough)",
+  "blockdesc-improvedaxlepassthrough*": "Fits inside a full block to transfer power while maintaining room integrity",
+  "axle-insideof": "inside of",
+
+  "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
+  "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
 }
