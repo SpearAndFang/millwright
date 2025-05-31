@@ -49,9 +49,13 @@ namespace Millwright.ModSystem
         {
             this.bladeModifier = this.widebladeModifier;
             this.bladeType = this.Block.FirstCodePart(1).ToString();
-            
-            this.bladeModifier *= 1f; 
- 
+
+            if (this.bladeType == "two")
+                this.bladeModifier *= 0.667f;
+            else //three
+            {
+                this.bladeModifier *= 1f;
+            }
             base.Initialize(api, properties);
             this.sound = new AssetLocation("game:sounds/effect/swoosh");
             this.weatherSystem = this.Api.ModLoader.GetModSystem<WeatherSystemBase>();
@@ -119,6 +123,13 @@ namespace Millwright.ModSystem
             var sailtype = slot.Itemstack.Collectible.LastCodePart();
             if (!sail.StartsWith("sailassembly") || slot.Itemstack.Collectible.Code.Domain != "millwright")
             { return false; }
+
+            var sailcount = slot.Itemstack.Collectible.FirstCodePart(1);
+            if (this.bladeType != sailcount)
+            {
+                return false;
+            }
+
 
             var assetLoc = new AssetLocation("millwright:" + sail);
             var sailStack = new ItemStack(this.Api.World.GetItem(assetLoc));
@@ -243,11 +254,18 @@ namespace Millwright.ModSystem
             }
             else
             {
-                this.Shape = new CompositeShape()
+                try
                 {
-                    Base = new AssetLocation("millwright:block/wood/mechanics/ud/" + this.bladeType + "/" + this.SailType + "/windmillud-" + this.SailLength + "blade"),
-                    rotateY = this.Block.Shape.rotateY
-                };
+                    this.Shape = new CompositeShape()
+                    {
+                        Base = new AssetLocation("millwright:block/wood/mechanics/ud/" + this.bladeType + "/" + this.SailType + "/windmillud-" + this.SailLength + "blade"),
+                        rotateY = this.Block.Shape.rotateY
+                    };
+                }
+                catch
+                {
+                    //shouldn't need the try catch as long as all the assets exist
+                }
             }
         }
 

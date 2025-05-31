@@ -3,9 +3,11 @@ namespace Millwright.ModSystem
 {
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Linq;
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
     using Vintagestory.API.MathTools;
+    using Vintagestory.API.Util;
     using Vintagestory.GameContent.Mechanics;
 
     public class BlockWindmillRotorUD : BlockMPBase //, IMPPowered
@@ -86,26 +88,33 @@ namespace Millwright.ModSystem
 
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
+            WorldInteraction[] interactions = new WorldInteraction[0];
+
             var be = world.BlockAccessor.GetBlockEntity(selection.Position)?.GetBehavior<BEBehaviorWindmillRotorUD>();
             if (be != null)
             {
                 if (be.SailLength < 8)
                 {
-                    return new WorldInteraction[]
-                    {
-                            new WorldInteraction()
-                            {
-                                ActionLangCode = "game:heldhelp-addsails",
-                                MouseButton = EnumMouseButton.Right,
-                                Itemstacks = new ItemStack[] {
+                    Item[] sailAssemblies = world.SearchItems(new AssetLocation("millwright:sailassembly-" + be.Block.FirstCodePart(1) + "-*"));
 
-                                    new ItemStack(world.GetItem(new AssetLocation("millwright:sailassembly-three-sailwide")), 1)
-                                }
-                            }
-                    };
+                    if (sailAssemblies == null)
+                    { return interactions; }
+
+                    List<ItemStack> stacks = new List<ItemStack>();
+                    for (int i = 0; i < sailAssemblies.Count(); i++)
+                    {
+                        stacks.Add(new ItemStack(world.GetItem(sailAssemblies[i].Id)));
+                    }
+
+                    interactions = interactions.Append(new WorldInteraction()
+                    {
+                        ActionLangCode = "game:heldhelp-addsails",
+                        MouseButton = EnumMouseButton.Right,
+                        Itemstacks = stacks.ToArray()
+                    });
                 }
             }
-            return new WorldInteraction[0];
+            return interactions;
         }
     }
 }
