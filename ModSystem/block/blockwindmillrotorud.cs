@@ -2,7 +2,7 @@ namespace Millwright.ModSystem
 
 {
     using System.Collections.Generic;
-    using System.Diagnostics;
+    //using System.Diagnostics;
     using System.Linq;
     using Vintagestory.API.Client;
     using Vintagestory.API.Common;
@@ -10,7 +10,7 @@ namespace Millwright.ModSystem
     using Vintagestory.API.Util;
     using Vintagestory.GameContent.Mechanics;
 
-    public class BlockWindmillRotorUD : BlockMPBase //, IMPPowered
+    public class BlockWindmillRotorUD : BlockMPBase, IMPPowered
     {
         private BlockFacing powerOutFacing;
         private string bladeType;
@@ -31,8 +31,6 @@ namespace Millwright.ModSystem
         public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
         {
             return face == this.powerOutFacing;
-            //if (face == BlockFacing.UP) return true;
-            //return false;
         }
 
         
@@ -43,25 +41,30 @@ namespace Millwright.ModSystem
                 return false;
             }
 
-            foreach (var face in BlockFacing.ALLFACES)
+            //foreach (var face in BlockFacing.ALLFACES)
+            foreach (var face in BlockFacing.VERTICALS) //in case I decide to have a down variant
             {
                 var pos = blockSel.Position.AddCopy(face);
                 if (world.BlockAccessor.GetBlock(pos) is IMechanicalPowerBlock block)
                 {
                     if (block.HasMechPowerConnectorAt(world, pos, face.Opposite))
                     {
-                        var rotorAsset = "millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-up";
-                        Debug.WriteLine(rotorAsset);
-                        var toPlaceBlock = world.GetBlock(rotorAsset);
-
-                        if (toPlaceBlock != null)
+                        if (face.ToString() == "down")
                         {
-                            world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
-                            block.DidConnectAt(world, pos, face.Opposite);
-                            this.WasPlaced(world, blockSel.Position, face);
-                            return true;
+                            var rotorAsset = "millwright:" + this.FirstCodePart() + "-" + this.bladeType + "-up";
+                            //Debug.WriteLine(rotorAsset);
+                            var toPlaceBlock = world.GetBlock(rotorAsset);
+
+                            if (toPlaceBlock != null)
+                            {
+                                world.BlockAccessor.SetBlock(toPlaceBlock.BlockId, blockSel.Position);
+                                block.DidConnectAt(world, pos, face.Opposite);
+                                this.WasPlaced(world, blockSel.Position, face);
+                                return true;
+                            }
+                            return false;
                         }
-                        return false;
+                       
                     }
                 }
             }

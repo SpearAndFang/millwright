@@ -33,7 +33,7 @@ namespace Millwright.ModSystem
 
         public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
         {
-            return face == this.powerOutFacing;
+            return face == this.powerOutFacing; 
         }
 
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)

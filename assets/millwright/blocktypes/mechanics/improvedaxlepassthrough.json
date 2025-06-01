@@ -11,7 +11,8 @@
     }
   ],
   "attributes": {
-    "handbook": { "exclude": true }
+    "handbook": { "exclude": true },
+    "liquidBarrierOnSides": [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ]
   },
   "creativeinventory": {
   },

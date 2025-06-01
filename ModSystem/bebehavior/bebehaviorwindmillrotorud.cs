@@ -12,7 +12,7 @@ namespace Millwright.ModSystem
     using Millwright.ModConfig;
 
 
-    internal class BEBehaviorWindmillRotorUD : BEBehaviorMPRotor
+    internal class BEBehaviorWindmillRotorUD : BEBehaviorMPRotorUD
     {
         private WeatherSystemBase weatherSystem;
         private double windSpeed;
@@ -166,6 +166,22 @@ namespace Millwright.ModSystem
             return true;
         }
 
+
+        //unused for now - may use this for more precise collisions one day
+        private static float collisionMaxY(Cuboidf[] collboxes)
+        {
+            float largestNumber = 0f;
+            foreach (var obj in collboxes)
+            {
+                if (obj.MaxY > largestNumber)
+                {
+                    largestNumber = obj.MaxY;
+                }
+            }
+            return largestNumber;
+        }
+
+
         private bool Obstructed(int len)
         {
             var tmpPos = new BlockPos(0, 0, 0, 0);
@@ -193,6 +209,7 @@ namespace Millwright.ModSystem
                         tmpPos.Set(this.Position.X + dx, this.Position.Y + dy, this.Position.Z + dz);
                         var block = this.Api.World.BlockAccessor.GetBlock(tmpPos);
                         var collBoxes = block.GetCollisionBoxes(this.Api.World.BlockAccessor, tmpPos);
+
                         if (collBoxes != null && collBoxes.Length > 0 && !(block is BlockSnowLayer) && !(block is BlockSnow))
                         {
 
