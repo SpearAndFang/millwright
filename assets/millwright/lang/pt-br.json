@@ -7,7 +7,9 @@
 	"item-sailcentered": "Vela (centralizada)",
 	"item-sailangled": "Vela (inclinada)",
 	"item-sailwide": "Vela (larga)",
-	"itemdesc-sail*": "Componente de moinho. Requer um rotor de moinho reforçado",
+	"itemdesc-sailcentered": "Componente de moinho. Requer um rotor de moinho reforçado",
+	"itemdesc-sailangled": "Componente de moinho. Requer um rotor de moinho reforçado",
+	"itemdesc-sailwide": "Componente de moinho. Requer um rotor de moinho reforçado",
 	"block-brake-north": "Freio (reforçado)",
 	"block-woodenaxlepassthrough*": "Conduíte Eixo de madeira",
 	"blockdesc-woodenaxlepassthrough*": "Coloque em lados opostos de um bloco inteiro para transferir força enquanto mantém a integridade da sala. Deprecated. Please use the Improved wooden axle instead.",
@@ -32,6 +34,8 @@
 
 	"block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
 	"blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-	"item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+	"item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+	"itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+	"itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }
 

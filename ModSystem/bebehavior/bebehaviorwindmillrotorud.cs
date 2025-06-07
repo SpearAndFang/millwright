@@ -119,6 +119,15 @@ namespace Millwright.ModSystem
             if (this.SailLength >= 8)
             { return false; }
 
+
+            //make sure that sails match what's already on the rotor
+            if (this.SailLength > 0)
+            {
+                if (this.SailType != slot.Itemstack.Collectible.LastCodePart())
+                { return false; }
+            }
+
+
             var sail = slot.Itemstack.Collectible.Code.Path;
             var sailtype = slot.Itemstack.Collectible.LastCodePart();
             if (!sail.StartsWith("sailassembly") || slot.Itemstack.Collectible.Code.Domain != "millwright")
@@ -137,7 +146,8 @@ namespace Millwright.ModSystem
             {
                 return false;
             }
-             
+            
+         
 
             var len = this.SailLength + 1; 
 

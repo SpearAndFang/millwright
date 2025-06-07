@@ -7,7 +7,9 @@
   "item-sailcentered": "Вітрило (посередині)",
   "item-sailangled": "Вітрило (під кутом)",
   "item-sailwide": "Вітрило (wide)",
-  "itemdesc-sail*": "Компонент вітряка. Requires a reinforced windmill rotor",
+  "itemdesc-sailcentered": "Компонент вітряка. Requires a reinforced windmill rotor",
+  "itemdesc-sailangled": "Компонент вітряка. Requires a reinforced windmill rotor",
+  "itemdesc-sailwide": "Компонент вітряка. Requires a reinforced windmill rotor",
   "block-brake-north": "Гальма (посилений)",
   "block-woodenaxlepassthrough*": "Дерев'яний вал (passthrough)",
   "blockdesc-woodenaxlepassthrough*": "Place one on either side of a full block to transfer power while maintaining room integrity. Deprecated. Please use the Improved wooden axle instead.",
@@ -32,5 +34,7 @@
 
   "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
   "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+  "itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+  "itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }

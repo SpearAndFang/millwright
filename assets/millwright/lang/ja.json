@@ -12,7 +12,9 @@
   "item-sailcentered": "帆(真ん中に軸)",
   "item-sailangled": "帆(片側に軸)",
   "item-sailwide": "帆(幅広)",
-  "itemdesc-sail*": "風車の部品。強化済の風車のローターが必要",
+  "itemdesc-sailcentered": "風車の部品。強化済の風車のローターが必要",
+  "itemdesc-sailangled": "風車の部品。強化済の風車のローターが必要",
+  "itemdesc-sailwide": "風車の部品。強化済の風車のローターが必要",
   "block-brake-north": "ブレーキ(補強済)",
   "block-woodenaxlepassthrough*": "木の軸(パススルー)",
   "blockdesc-woodenaxlepassthrough*": "フルブロックの両側に1つずつ配置することで、部屋の整合性を保ちながら動力を伝達出来る. Deprecated. Please use the Improved wooden axle instead.",
@@ -37,5 +39,7 @@
 
   "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
   "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+  "itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+  "itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }

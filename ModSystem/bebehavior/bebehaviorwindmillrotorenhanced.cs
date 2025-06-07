@@ -36,18 +36,32 @@ namespace Millwright.ModSystem
         public float bladeModifier = 1.0f;
 
         protected override float Resistance => 0.003f;
-        protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4);
-
-        protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier);
 
 
-        //protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier / (this.bladeCount / 2.01), this.windSpeed * this.bladeModifier / (this.bladeCount / 2.01));
-        // hmmm
+
+        protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4); // 1.2.3
+
+        protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier); // 1.2.3
+
+        protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;  // 1.2.3
+
+
+        /* Working
+        //protected override double AccelerationFactor => 0.05d;
+
+
+        // as per Billiam
+        protected override float TargetSpeed => (float)Math.Min(0.6f, windSpeed + 0.6f); //Vanilla as per Billiam
+
         // while this seems to fix the overperformance issue it seems terribly underpowered with a fully loaded 8 blade 4 windmill setup
         // almost like torquefactor also needs to be modified
-        
+        //protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier / (this.bladeCount / 2.01), this.windSpeed * this.bladeModifier / (this.bladeCount / 2.01));
 
-        protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
+
+        protected override float TorqueFactor => this.SailLength  * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
+        */
+
+
 
         public BEBehaviorWindmillRotorEnhanced(BlockEntity blockentity) : base(blockentity)
         { }

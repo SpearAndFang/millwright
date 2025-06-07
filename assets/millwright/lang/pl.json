@@ -7,7 +7,9 @@
   "item-sailcentered": "Żagiel (centralny)",
   "item-sailangled": "Żagiel (kątowy)",
   "item-sailwide": "Żagiel (szeroki)",
-  "itemdesc-sail*": "Element wiatraka. Wymaga wzmocnionego wirnika",
+  "itemdesc-sailcentered": "Element wiatraka. Wymaga wzmocnionego wirnika",
+  "itemdesc-sailangled": "Element wiatraka. Wymaga wzmocnionego wirnika",
+  "itemdesc-sailwide": "Element wiatraka. Wymaga wzmocnionego wirnika",
   "block-brake-north": "Hamulec (wzmocniony)",
   "block-woodenaxlepassthrough*": "Drewniana oś (przelotowa)",
   "blockdesc-woodenaxlepassthrough*": "Umieść po jednej z każdej strony pełnego bloku, aby przenieść moc, zachowując integralność pomieszczenia. Deprecated. Please use the Improved wooden axle instead.",
@@ -32,5 +34,7 @@
 
   "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
   "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+  "itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+  "itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }

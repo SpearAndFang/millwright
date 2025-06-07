@@ -10,7 +10,9 @@
   "item-sailcentered": "Aspa Centrada",
   "item-sailangled": "Aspa Angular",
   "item-sailwide": "Aspa Ancha",
-  "itemdesc-sail*": "Componente de Molino de Viento. Necesita un Rotor Reforzado de Molino de Viento.",
+  "itemdesc-sailcentered": "Componente de Molino de Viento. Necesita un Rotor Reforzado de Molino de Viento.",
+  "itemdesc-sailangled": "Componente de Molino de Viento. Necesita un Rotor Reforzado de Molino de Viento.",
+  "itemdesc-sailwide": "Componente de Molino de Viento. Necesita un Rotor Reforzado de Molino de Viento.",
   "block-brake-north": "Freno Reforzado",
   "block-woodenaxlepassthrough*": "Casquillo con Eje de Madera",
   "blockdesc-woodenaxlepassthrough*": "<font opacity='0.6'><i>Coloca uno a cada lado de un bloque completo, para transferir la potencia, manteniendo la integridad de la estancia.</i></font>\n",
@@ -35,5 +37,7 @@
 
   "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
   "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+  "itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+  "itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }

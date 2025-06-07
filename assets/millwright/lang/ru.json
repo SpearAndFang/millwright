@@ -11,7 +11,9 @@
   "item-sailcentered": "Парус (центр)",
   "item-sailangled": "Парус (угловой)",
   "item-sailwide": "Парус (широкий)",
-  "itemdesc-sail*": "Для этого паруса требуется усиленный ротор ветряной мельницы",
+  "itemdesc-sailcentered": "Для этого паруса требуется усиленный ротор ветряной мельницы",
+  "itemdesc-sailangled": "Для этого паруса требуется усиленный ротор ветряной мельницы",
+  "itemdesc-sailwide": "Для этого паруса требуется усиленный ротор ветряной мельницы",
   "block-brake-north": "Тормоз (усиленный)",
   "block-woodenaxlepassthrough*": "Деревянная ось (для стены)",
   "blockdesc-woodenaxlepassthrough*": "Установите две с двух сторон полного блока, чтобы передавать энергию, сохраняя целостность помещения. Deprecated. Please use the Improved wooden axle instead.",
@@ -36,5 +38,7 @@
 
   "block-windmillrotorud-three-*": "Three sail vertical axis windmill rotor (reinforced)",
   "blockdesc-windmillrotorud-*": "Requires one or more sail assemblies to function",
-  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical axis windmills)"
+  "item-sailassembly-three-sailwide": "Sail Assembly (for vertical three axis windmills)",
+  "itemdesc-sailassembly-three-*": "Windmill component. Requires a vertical three axis windmill rotor",
+  "itemdesc-sailassembly-two-*": "Windmill component. Requires a vertical two axis windmill rotor"
 }

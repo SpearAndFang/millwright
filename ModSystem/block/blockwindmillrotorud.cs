@@ -98,7 +98,12 @@ namespace Millwright.ModSystem
             {
                 if (be.SailLength < 8)
                 {
-                    Item[] sailAssemblies = world.SearchItems(new AssetLocation("millwright:sailassembly-" + be.Block.FirstCodePart(1) + "-*"));
+                    string searcher = "*";
+
+                    if (be.SailLength > 0)
+                    { searcher = be.SailType; }
+
+                    Item[] sailAssemblies = world.SearchItems(new AssetLocation("millwright:sailassembly-" + be.Block.FirstCodePart(1) + "-" + searcher));
 
                     if (sailAssemblies == null)
                     { return interactions; }
