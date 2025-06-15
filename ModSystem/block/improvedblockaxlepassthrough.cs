@@ -12,7 +12,7 @@ namespace Millwright.ModSystem
         {
             // https://github.com/issues/assigned?issue=SpearAndFang%7Cmillwright%7C8
             // prevent middle click from putting that weird variant in the inventory
-            return null;
+            return new ItemStack(world.GetBlock(new AssetLocation("millwright:improvedaxlepassthroughfull")));
         }
 
         public override int GetRetention(BlockPos pos, BlockFacing facing, EnumRetentionType type)
