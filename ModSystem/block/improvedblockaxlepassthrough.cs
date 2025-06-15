@@ -8,6 +8,12 @@ namespace Millwright.ModSystem
 
     public class ImprovedBlockAxlePassthrough : BlockMPBase
     {
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
+        {
+            // https://github.com/issues/assigned?issue=SpearAndFang%7Cmillwright%7C8
+            // prevent middle click from putting that weird variant in the inventory
+            return null;
+        }
 
         public override int GetRetention(BlockPos pos, BlockFacing facing, EnumRetentionType type)
         {
