@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
   </PropertyGroup>
@@ -12,7 +12,8 @@
       <Private>false</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\..\Users\Admin\AppData\Roaming\VintageStory\Lib\protobuf-net.dll</HintPath>
+      <HintPath>$(VINTAGE_STORY)/Lib/protobuf-net.dll</HintPath>
+	  <Private>false</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>

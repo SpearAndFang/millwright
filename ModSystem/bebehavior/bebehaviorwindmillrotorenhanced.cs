@@ -192,7 +192,12 @@ namespace Millwright.ModSystem
 
 
             sail = slot.Itemstack.Collectible.Code.Path;
-            if (!sail.StartsWith("sail") || slot.Itemstack.Collectible.Code.Domain != "millwright")
+
+            //1.2.8 fix
+            if (sail.StartsWith("sailassembly"))
+            { return false; }
+            
+            if (!sail.StartsWith("sail") || slot.Itemstack.Collectible.Code.Domain != "millwright") 
             { return false; }
 
             if (this.SailLength > 0 && this.SailType != sail)
