@@ -1,0 +1,338 @@
+[
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,_CM,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:log-placed-*-ud",
+					"name": "wood",
+					"quantity": 1
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-three-north",
+				"quantity": 1
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,LCM,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:log-placed-*-ud",
+					"name": "wood",
+					"quantity": 1
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-six-north",
+				"quantity": 1
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,_CM,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:logsection-placed-*-ud",
+					"name": "wood",
+					"quantity": 1
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-three-north",
+				"quantity": 1
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,LCM,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:logsection-placed-*-ud",
+					"name": "wood",
+					"quantity": 1
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-six-north",
+				"quantity": 1
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,MC_,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:log-placed-*-ud",
+					"name": "wood",
+					"quantity": 2
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-single-north",
+				"quantity": 1
+			}
+		}
+	},
+	{
+		"dependsOn": [
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotor.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,MC_,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "game:logsection-placed-*-ud",
+					"name": "wood",
+					"quantity": 2
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotor-single-north",
+				"quantity": 1
+			}
+		}
+	}
+]

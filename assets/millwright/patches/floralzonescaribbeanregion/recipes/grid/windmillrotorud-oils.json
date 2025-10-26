@@ -1,0 +1,59 @@
+[
+	{
+		"dependsOn": [
+			{ "modid": "floralzonescaribbeanregion" },
+			{ "modid": "oilspatched" }
+		],
+		"file": "millwright:recipes/grid/windmillrotorud.json",
+		"op": "addmerge",
+		"path": "/-",
+		"value": {
+			"ingredientPattern": "_H_,MCM,ELO",
+			"enabled": true,
+			"shapeless": false,
+			"ingredients": {
+				"H": {
+					"type": "item",
+					"code": "game:hammer-*",
+					"isTool": true
+				},
+				"C": {
+					"type": "item",
+					"code": "game:chisel-*",
+					"isTool": true
+				},
+				"L": {
+					"type": "block",
+					"code": "floralzonescaribbeanregion:log-placed-*-ud",
+					"name": "wood",
+					"quantity": 1
+				},
+				"E": {
+					"type": "item",
+					"code": "game:resin"
+				},
+				"M": {
+					"type": "item",
+					"code": "game:metalplate-iron"
+				},
+				"O": {
+					"type": "block",
+					"code": "game:woodbucket"
+				}
+			},
+			"attributes": {
+				"liquidContainerProps": {
+					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresLitres": 1
+				}
+			},
+			"width": 3,
+			"height": 3,
+			"output": {
+				"type": "block",
+				"code": "millwright:windmillrotorud-three-up",
+				"quantity": 1
+			}
+		}
+	}
+]
