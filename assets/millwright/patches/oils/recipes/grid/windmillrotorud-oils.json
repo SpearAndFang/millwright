@@ -10,6 +10,7 @@
 			"ingredientPattern": "_H_,MCM,ELO",
 			"enabled": true,
 			"shapeless": false,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -42,7 +43,10 @@
 			},
 			"attributes": {
 				"liquidContainerProps": {
-					"requiresContent": { "type": "item", "code": "oils:plantoil-*" },
+					"requiresContent": {
+						"type": "item",
+						"code": "oils:plantoil-*"
+					},
 					"requiresLitres": 1
 				}
 			},

@@ -3,6 +3,7 @@
     "ingredientPattern": "_H_,MCM,ELF",
     "enabled": true,
     "shapeless": false,
+    "recipegroup": 1,
     "ingredients": {
       "H": {
         "type": "item",
