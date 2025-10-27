@@ -30,13 +30,14 @@ namespace Millwright.ModSystem
 
         private readonly float widebladeModifier = (float)ModConfig.Loaded.SailWideModifier;
         private readonly float sailRotationModifier = (float)ModConfig.Loaded.SailRotationModifier;
+        private readonly bool useIncreasedWindSpeed = ModConfig.Loaded.UseIncreasedWindSpeed;
 
         public float bladeModifier = 1.0f;
 
         protected override float Resistance => 0.003f;
-        protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4);
+        protected override double AccelerationFactor => useIncreasedWindSpeed ? 0.05d + (this.bladeModifier / 4) : 0.05d;
 
-        protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier);
+        protected override float TargetSpeed => useIncreasedWindSpeed ? (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier) : (float)Math.Min(0.6f, this.windSpeed);
 
         protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;    // Should stay at /4f (5 sails are supposed to have "125% power output")
 
