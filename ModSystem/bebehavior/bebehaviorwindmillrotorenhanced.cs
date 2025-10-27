@@ -32,6 +32,7 @@ namespace Millwright.ModSystem
         private readonly float angledbladeModifier = (float)ModConfig.Loaded.SailAngledModifier;
         private readonly float widebladeModifier = (float)ModConfig.Loaded.SailWideModifier;
         private readonly float sailRotationModifier = (float)ModConfig.Loaded.SailRotationModifier;
+        private readonly bool useIncreasedWindSpeed = ModConfig.Loaded.UseIncreasedWindSpeed;
 
         public float bladeModifier = 1.0f;
 
@@ -39,9 +40,9 @@ namespace Millwright.ModSystem
 
 
 
-        protected override double AccelerationFactor => 0.05d + (this.bladeModifier / 4); // 1.2.3
+        protected override double AccelerationFactor => useIncreasedWindSpeed ? 0.05d + (this.bladeModifier / 4) : 0.05d; // 1.2.3
 
-        protected override float TargetSpeed => (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier); // 1.2.3
+        protected override float TargetSpeed => useIncreasedWindSpeed ? (float)Math.Min(0.6f * this.bladeModifier, this.windSpeed * this.bladeModifier) : (float)Math.Min(0.6f, this.windSpeed); // 1.2.3
 
         protected override float TorqueFactor => this.SailLength * this.bladeModifier / 4f;  // 1.2.3
 
