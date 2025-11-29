@@ -1,0 +1,41 @@
+{
+  // Korean localization file for 'Millwright'
+  // Mod Version: v1.3.0
+  // Translated By: Orsy
+  // Manual translation. 
+  "game:tabname-millwright": "Millwright",
+  "block-windmillrotor-three-*": "3엽 풍차 로터 (강화됨)",
+  "block-windmillrotor-single-*": "4엽 풍차 로터 (강화됨)",
+  "block-windmillrotor-six-*": "6엽 풍차 로터 (강화됨)",
+  "block-windmillrotor-double-*": "8엽 풍차 로터 (강화됨)",
+  "item-sailcentered": "풍차 날개 (중앙)",
+  "item-sailangled": "풍차 날개 (각진)",
+  "item-sailwide": "풍차 날개 (넓은)",
+  "itemdesc-sailcentered": "풍차 부품. 강화된 풍차 로터가 필요합니다",
+  "itemdesc-sailangled": "풍차 부품. 강화된 풍차 로터가 필요합니다",
+  "itemdesc-sailwide": "풍차 부품. 강화된 풍차 로터가 필요합니다",
+  "block-brake-north": "브레이크 (강화됨)",
+  "block-woodenaxlepassthrough*": "나무 축 (관통형)",
+  "blockdesc-woodenaxlepassthrough*": "방의 밀폐 상태를 유지하면서 동력을 전달하려면 온전한 블록의 양쪽에 하나씩 배치하세요. 현재는 더 이상 사용되지 않습니다. 대신 향상된 나무 축을 사용하세요.",
+  "blockdesc-suitable-block-needed": "이 축을 지지하려면 더 적합한 블록이 필요합니다",
+  "AllowSailDeconstruction": "풍차 날개 해체 허용",
+  "AllowSailDeconstruction-Comment": "제작창에서 풍차 날개를 해체하여 아마포를 회수하는 것을 방지하려면 비활성화하세요.",
+  "BrakeResistanceModifier": "브레이크 저항력",
+  "BrakeResistanceModifier-Comment": "강화된 브레이크의 제동 저항력 보정값입니다.",
+  "SailCenteredModifier": "중앙 풍차 날개",
+  "SailCenteredModifier-Comment": "강화된 \"중앙\" 풍차 날개의 동력 출력 보정값입니다.",
+  "SailAngledModifier": "각진 풍차 날개",
+  "SailAngledModifier-Comment": "강화된 \"각진\" 풍차 날개의 동력 출력 보정값입니다.",
+  "SailWideModifier": "넓은 풍차 날개",
+  "SailWideModifier-Comment": "강화된 \"넓은\" 풍차 날개의 동력 출력 보정값입니다.",
+  "SailRotationModifier": "풍차 날개 회전",
+  "SailRotationModifier-Comment": "새로운 풍차 날개의 회전 속도 보정값입니다. 클라이언트 측 시각 효과 설정일 뿐입니다.",
+  "block-improvedaxlepassthrough*": "향상된 나무 축 (관통형)",
+  "blockdesc-improvedaxlepassthrough*": "온전한 블록 안쪽에 설치하여 방의 밀폐 상태를 유지하면서 동력을 전달합니다",
+  "axle-insideof": "내부",
+  "block-windmillrotorud-three-*": "수직 3축 풍차 로터 (강화됨)",
+  "blockdesc-windmillrotorud-*": "작동하려면 한 개 이상의 풍차 날개 조립체가 필요합니다",
+  "item-sailassembly-three-sailwide": "풍차 날개 조립체 (수직 3축 풍차용)",
+  "itemdesc-sailassembly-three-*": "풍차 부품. 수직 3축 풍차 로터가 필요합니다",
+  "itemdesc-sailassembly-two-*": "풍차 부품. 수직 2축 풍차 로터가 필요합니다"
+}
