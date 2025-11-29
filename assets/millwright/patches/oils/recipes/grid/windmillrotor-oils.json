@@ -10,7 +10,7 @@
 			"ingredientPattern": "_H_,_CM,ELO",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -70,7 +70,7 @@
 			"ingredientPattern": "_H_,LCM,ELO",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -130,7 +130,7 @@
 			"ingredientPattern": "_H_,_CM,ELO",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -190,7 +190,7 @@
 			"ingredientPattern": "_H_,LCM,ELO",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
