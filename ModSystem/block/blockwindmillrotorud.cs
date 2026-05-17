@@ -27,8 +27,8 @@ namespace Millwright.ModSystem
         public override void DidConnectAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
         { }
 
-
-        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
+        // 1.22 added forblock
+        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face, BlockMPBase forblock)
         {
             return face == this.powerOutFacing;
         }
@@ -47,7 +47,7 @@ namespace Millwright.ModSystem
                 var pos = blockSel.Position.AddCopy(face);
                 if (world.BlockAccessor.GetBlock(pos) is IMechanicalPowerBlock block)
                 {
-                    if (block.HasMechPowerConnectorAt(world, pos, face.Opposite))
+                    if (block.HasMechPowerConnectorAt(world, pos, face.Opposite, this)) //1.22 added this
                     {
                         if (face.ToString() == "down")
                         {

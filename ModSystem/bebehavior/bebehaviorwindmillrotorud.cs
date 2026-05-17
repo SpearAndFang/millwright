@@ -255,7 +255,7 @@ namespace Millwright.ModSystem
                 {
                     return this.lastKnownAngleRad;
                 }
-                if (this.isRotationReversed())
+                if (this.IsRotationReversed()) //1.22 "I"sRotationReversed
                 {
                     return this.lastKnownAngleRad = 6.2831855f - this.network.AngleRad * this.GearedRatio * this.sailRotationModifier % 6.2831855f;
                 }

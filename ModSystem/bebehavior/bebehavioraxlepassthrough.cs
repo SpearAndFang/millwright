@@ -151,7 +151,10 @@ namespace Millwright.ModSystem
             if (bPos.LastCodePart()[0] == 'd' && pos.Y < neibpos.Y)
             { return false; }
 
-            if (!(bPos is IMechanicalPowerBlock connectedToBlock) || !connectedToBlock.HasMechPowerConnectorAt(this.Api.World, pos, toFacing.Opposite))
+            //1.22 added (BlockMPBase)bPos verify this!!!
+            //
+            //S
+            if (!(bPos is IMechanicalPowerBlock connectedToBlock) || !connectedToBlock.HasMechPowerConnectorAt(this.Api.World, pos, toFacing.Opposite, (BlockMPBase)bPos))
             { return false; }
 
             var newNetwork = connectedToBlock.GetNetwork(this.Api.World, neibpos);

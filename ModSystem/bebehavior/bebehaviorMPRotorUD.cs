@@ -111,7 +111,8 @@
             // Don't run this behavior for power producers. Its done in initialize instead
         }
 
-        protected override MechPowerPath[] GetMechPowerExits(MechPowerPath fromExitTurnDir)
+        //1.22 changed from protected to public
+        public override MechPowerPath[] GetMechPowerExits(MechPowerPath fromExitTurnDir)
         {
             return new MechPowerPath[0];
         }

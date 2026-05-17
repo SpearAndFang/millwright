@@ -38,7 +38,7 @@
 				},
 				"F": {
 					"type": "item",
-					"code": "game:fat"
+					"code": "game:fat-rendered"
 				}
 			},
 			"width": 3,

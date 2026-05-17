@@ -14,8 +14,8 @@ namespace Millwright.ModSystem
             return dirs[0] == facing.Code[0] || (dirs.Length > 1 && dirs[1] == facing.Code[0]);
         }
 
-
-        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
+        // 1.22 added forblock
+        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face, BlockMPBase forblock)
         { return this.IsOrientedTo(face); }
 
 
@@ -30,7 +30,7 @@ namespace Millwright.ModSystem
                 if (nblock is IMechanicalPowerBlock block)
                 {
 
-                    if (block != null && block.HasMechPowerConnectorAt(world, pos, faceOpposite))
+                    if (block != null && block.HasMechPowerConnectorAt(world, pos, faceOpposite, this)) //1.22 added this
                     {
                         //make sure neib and passthrough are oriented the same
                         if (IsFacing(world.BlockAccessor.GetBlock(blockPos)) == faceOpposite)
@@ -101,7 +101,8 @@ namespace Millwright.ModSystem
                     var npos = pos.AddCopy(face);
                     var block = world.BlockAccessor.GetBlock(npos) as IMechanicalPowerBlock;
                     var prevConnected = connected;
-                    if (block != null && block.HasMechPowerConnectorAt(world, pos, face.Opposite) && world.BlockAccessor.GetBlockEntity(pos)?.GetBehavior<BEBehaviorAxlePassthrough>()?.disconnected == false)
+                    // 1.22 added this
+                    if (block != null && block.HasMechPowerConnectorAt(world, pos, face.Opposite, this) && world.BlockAccessor.GetBlockEntity(pos)?.GetBehavior<BEBehaviorAxlePassthrough>()?.disconnected == false)
                     { connected = true; }
 
                     if (!(block is BlockAngledGears blockagears))

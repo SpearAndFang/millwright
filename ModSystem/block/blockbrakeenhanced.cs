@@ -12,8 +12,8 @@ namespace Millwright.ModSystem
             return facing.Code == this.Variant["side"];
         }
 
-
-        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face)
+        // 1.22 added forblock
+        public override bool HasMechPowerConnectorAt(IWorldAccessor world, BlockPos pos, BlockFacing face, BlockMPBase forblock)
         {
             var ownFacing = BlockFacing.FromCode(this.Variant["side"]);
             var leftFacing = BlockFacing.HORIZONTALS_ANGLEORDER[GameMath.Mod(ownFacing.HorizontalAngleIndex - 1, 4)];
