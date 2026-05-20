@@ -10,7 +10,7 @@
 			"ingredientPattern": "HCS,RLE",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -62,7 +62,7 @@
 			"ingredientPattern": "HCS,RLE,M__",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -118,7 +118,7 @@
 			"ingredientPattern": "_H_,_CM,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -169,7 +169,7 @@
 			"ingredientPattern": "_H_,LCM,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -220,7 +220,7 @@
 			"ingredientPattern": "HCS,RLE",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -272,7 +272,7 @@
 			"ingredientPattern": "HCS,RLE,M__",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 2,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -328,7 +328,7 @@
 			"ingredientPattern": "_H_,_CM,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -379,7 +379,7 @@
 			"ingredientPattern": "_H_,LCM,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -430,7 +430,7 @@
 			"ingredientPattern": "_H_,MC_,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
@@ -481,7 +481,7 @@
 			"ingredientPattern": "_H_,MC_,ELF",
 			"enabled": true,
 			"shapeless": false,
-			"recipegroup": 3,
+			"recipegroup": 1,
 			"ingredients": {
 				"H": {
 					"type": "item",
